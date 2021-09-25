@@ -204,12 +204,7 @@ const section_reviews = () => {
 
     const swiper = new Swiper(reviews_wrap.querySelector('.swiper'), {
 
-        spaceBetween: 80,
-
-        grid: {
-            rows: 2,
-            fill: 'row',
-        },
+       loop: true,
 
         pagination: {
             el: reviews_wrap.querySelector('.swiper_control__bullet'),
@@ -223,31 +218,37 @@ const section_reviews = () => {
             prevEl: reviews_wrap.querySelector('.swiper_control__left')
         },
 
+		on: {
+			init: function () {
+				reviews_wrap.querySelector('.page_smart .first').innerHTML = this.realIndex + 1
+				reviews_wrap.querySelector('.page_smart .last').innerHTML = this.slides.length - 2
+			},
+
+			activeIndexChange: function () {
+				reviews_wrap.querySelector('.page_smart .first').innerHTML = this.realIndex + 1
+			}
+		},
+
         breakpoints: {
             '0': {
                 slidesPerView: 1,
                 spaceBetween: 5,
             },
             '768': {
-                slidesPerView: 1.5,
-                centeredSlides: false,
-                centeredSlidesBounds: false,
+                slidesPerView: 1.8,
+				spaceBetween: 50,
+                centeredSlides: true,
+                centeredSlidesBounds: true,
             },
             '1050': {
                 slidesPerView: 2,
-                centeredSlides: false,
-                centeredSlidesBounds: false,
+				spaceBetween: 80,
             },
             '1440': {
                 slidesPerView: 3,
             }
         }
     })
-
-	// window.addEventListener('resize', function() {
-	// 	reviews_wrap.querySelector('.swiper').classList.add('swiper-grid')
-	// 	reviews_wrap.querySelector('.swiper').classList.add('swiper-grid-column')
-	// })
 }
 
 header()

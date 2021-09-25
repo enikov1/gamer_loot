@@ -696,7 +696,7 @@ body {
   }
   .header__top__right .burger span {
     width: 100%;
-    height: 0.09375rem;
+    height: 0.125rem;
     background-color: var(--c-yellow);
   }
 }
@@ -1862,21 +1862,61 @@ body {
   background: linear-gradient(270deg, white 0%, rgba(255, 255, 255, 0) 70%, rgba(255, 255, 255, 0) 100%);
 }
 
-.section_reviews .title_h2 {
-  color: var(--c-text-dark);
+.section_reviews__head {
   margin-bottom: 9.375rem;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
 }
 
 @media (max-width: 1050px) {
-  .section_reviews .title_h2 {
+  .section_reviews__head {
     margin-bottom: 4.8125rem;
   }
 }
 
 @media (max-width: 540px) {
-  .section_reviews .title_h2 {
+  .section_reviews__head {
     margin-bottom: 3.125rem;
   }
+}
+
+.section_reviews__head .page_smart {
+  display: none;
+}
+
+@media (max-width: 767px) {
+  .section_reviews__head .page_smart {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+  }
+  .section_reviews__head .page_smart .first, .section_reviews__head .page_smart .last {
+    color: var(--c-text-gray);
+  }
+  .section_reviews__head .page_smart .last {
+    margin-left: 0.125rem;
+  }
+  .section_reviews__head .page_smart .last::before {
+    content: "/";
+  }
+}
+
+.section_reviews .title_h2 {
+  color: var(--c-text-dark);
+}
+
+@media (max-width: 540px) {
   .section_reviews .title_h2 span {
     display: none;
   }
@@ -1896,10 +1936,18 @@ body {
   height: auto;
 }
 
+.section_reviews .swiper .swiper-slide .review_item {
+  margin-bottom: 5rem;
+}
+
 @media (max-width: 767px) {
-  .section_reviews .swiper .swiper-slide {
+  .section_reviews .swiper .swiper-slide .review_item {
     margin-bottom: 0.9375rem;
   }
+}
+
+.section_reviews .swiper .swiper-slide .review_item:last-child {
+  margin-bottom: 0;
 }
 
 .review_item {
