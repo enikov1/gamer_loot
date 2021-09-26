@@ -2563,6 +2563,10 @@ body {
   fill: var(--c-text-gray-light);
 }
 
+.field_set__visible.active svg path {
+  fill: var(--c-text-gray-light);
+}
+
 .field_set__message {
   margin-top: 0.625rem;
   font-size: 0.8125rem;

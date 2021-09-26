@@ -196,6 +196,18 @@ const modal_profile = () => {
 
 }
 
+function show_hide_password(target) {
+	const input = target.closest('.field_set').querySelector('input')
+	if (input.getAttribute('type') == 'password') {
+		target.classList.add('active');
+		input.setAttribute('type', 'text')
+	} else {
+		target.classList.remove('active');
+		input.setAttribute('type', 'password')
+	}
+	// return false;
+}
+
 const auth_modal = () => {
 	const auth_tab_button = document.querySelectorAll('.modal_profie__tab button')
 	const auth_tab_wrap = document.querySelectorAll('.modal_profie__wrap_tb')
