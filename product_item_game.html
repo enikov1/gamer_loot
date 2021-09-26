@@ -1,0 +1,755 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
+    <title>Страница с товарами по конкретной игре</title>
+    <link rel="stylesheet" href="css/main.min.css">
+    <link rel="stylesheet" href="css/libs.min.css">
+  </head>
+  <body>
+    <header class="header header_small">
+      <div class="container">
+        <div class="header__top"><a class="logo" href="#"><img src="img/logo_small.svg" alt="logo"></a>
+          <nav class="header__top_nav">
+            <ul>
+              <li><a href="#">Новости</a></li>
+              <li><a href="#">Отзывы</a></li>
+              <li><a href="#">FAQ</a></li>
+              <li><a href="#">Правила</a></li>
+              <li><a href="#">Администрация</a></li>
+            </ul>
+          </nav>
+          <div class="header__top__right"><a class="button_yellow_border" href="#"><span>Вход</span><i class="arrow"><svg width="18" height="12" viewBox="0 0 18 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M11.3265 0.364516C10.9867 0.704255 10.9928 1.2442 11.3265 1.57787L14.7178 4.96919L1.50437 4.96919C1.03116 4.96919 0.648957 5.35139 0.648957 5.8246C0.648957 6.29781 1.03116 6.68001 1.50437 6.68001L14.7178 6.68001L11.3265 10.0713C10.9928 10.405 10.9928 10.951 11.3265 11.2847C11.6601 11.6184 12.2061 11.6184 12.5398 11.2847L17.3932 6.43128C17.7269 6.09761 17.7269 5.5516 17.3932 5.21792L12.5398 0.364516C12.2061 0.0308439 11.6601 0.0308441 11.3265 0.364516Z"/>
+</svg></i></a>
+            <button class="burger" type="button"><span class="line"></span><span class="line"></span><span class="line"></span></button>
+          </div>
+        </div>
+      </div>
+    </header>
+    <div class="container">
+      <div class="breadcrumbs"><a href="/">Главная</a><a href="#">Все игры</a><span>Игра «Among us»</span></div>
+      <div class="page_game_filter">
+        <div class="sect_header">
+          <div class="sect_header__title">
+            <h1 class="title_h2">Among Us</h1>
+            <button class="icon-search" type="button"><svg width="25" height="25" viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M17.7727 15.8764H16.665L16.2724 15.4904C17.955 13.4889 18.8243 10.7583 18.3476 7.8561C17.6886 3.88169 14.4356 0.70787 10.5096 0.221791C4.5786 -0.521625 -0.41301 4.56791 0.316101 10.6153C0.792828 14.6183 3.90558 17.9351 7.80352 18.607C10.6499 19.0931 13.3279 18.2067 15.2909 16.4912L15.6695 16.8915V18.0209L21.6426 24.0969C22.2175 24.683 23.1429 24.683 23.7178 24.0969L23.7318 24.0826C24.3067 23.4964 24.3067 22.5529 23.7318 21.9667L17.7727 15.8764ZM9.35989 15.8764C5.86857 15.8764 3.05027 13.0028 3.05027 9.44301C3.05027 5.88319 5.86857 3.0096 9.35989 3.0096C12.8512 3.0096 15.6695 5.88319 15.6695 9.44301C15.6695 13.0028 12.8512 15.8764 9.35989 15.8764Z"/>
+</svg>
+            </button>
+            <button class="icon-filter" type="button"><svg width="24" height="20" viewBox="0 0 24 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+<rect x="2.51758" y="0.441895" width="1.77602" height="18.8256" rx="0.888009" fill="#18172A"/>
+<rect x="11.1133" y="0.441895" width="1.77602" height="18.8256" rx="0.888009" fill="#18172A"/>
+<rect x="19.709" y="0.441895" width="1.77602" height="18.8256" rx="0.888009" fill="#18172A"/>
+<circle cx="3.40571" cy="9.85468" r="2.53315" fill="#F3CF89" stroke="#18172A" stroke-width="1.6826"/>
+<circle cx="12.0014" cy="3.81635" r="2.53315" fill="#F3CF89" stroke="#18172A" stroke-width="1.6826"/>
+<circle cx="20.5971" cy="12.4853" r="2.53315" fill="#F3CF89" stroke="#18172A" stroke-width="1.6826"/>
+</svg>
+            </button>
+          </div>
+          <div class="filter_toggle_block">
+            <div class="sect_header__tab"><a class="button_gray_border active" href="#"><span>Товары (250)</span></a><a class="button_gray_border" href="#"><span>Услуги (3)</span></a></div>
+            <div class="sect_header__list">
+              <ul>
+                <li><a class="active" href="#">Все товары (250) </a></li>
+                <li><a href="#">Серебрянные рубли (100)</a></li>
+                <li><a href="#">Аккаунты (50)</a></li>
+                <li><a href="#">Предметы (50)</a></li>
+                <li><a href="#">Золотые рубли (50)</a></li>
+              </ul>
+            </div>
+            <div class="sect_header__selected">
+              <select class="custom_select" name="select_server">
+                <option value="1">Сервер</option>
+                <option value="2">Сервер 2</option>
+                <option value="3">Сервер 3</option>
+                <option value="4">Сервер 4</option>
+                <option value="5">Сервер 5</option>
+              </select>
+              <select class="custom_select md-mr-0" name="storona_server">
+                <option value="1">Сторона</option>
+                <option value="2">Сторона 2</option>
+                <option value="3">Сторона 3</option>
+                <option value="4">Сторона 4</option>
+                <option value="5">Сторона 5</option>
+              </select>
+              <label class="field_toggle">
+                <input type="checkbox" name="checked1"><span class="check"></span><span class="text">Только продавцы онлайн</span>
+              </label>
+            </div>
+          </div><a class="button_yellow_border" href="#"><span>Продать товары / услуги</span></a>
+        </div>
+        <div class="table_order">
+          <div class="table_order__header"><span class="w-20">Сервер</span><span class="w-50">Описание</span><span class="w-10"><span>Наличие</span><span>Кол-во</span></span><span class="w-30">Продавец</span><span class="w-10">
+              Цена<svg width="20" height="21" viewBox="0 0 20 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M10.1448 0.521278C4.84886 0.521278 0.55497 4.89886 0.55497 10.2997C0.55497 15.7005 4.84886 20.0781 10.1448 20.0781C15.4408 20.0781 19.7347 15.7005 19.7347 10.2997C19.7347 4.89886 15.4408 0.521278 10.1448 0.521278ZM10.1448 1.41097C11.3222 1.41097 12.4639 1.64586 13.5382 2.10917C14.5762 2.55684 15.5087 3.19793 16.3096 4.01455C17.1105 4.83117 17.7392 5.78189 18.1782 6.84021C18.6325 7.93544 18.8629 9.09938 18.8629 10.2997C18.8629 11.5 18.6325 12.6639 18.1782 13.7592C17.7392 14.8175 17.1105 15.7682 16.3096 16.5848C15.5087 17.4014 14.5762 18.0425 13.5382 18.4902C12.4639 18.9535 11.3222 19.1884 10.1448 19.1884C8.96748 19.1884 7.82579 18.9535 6.75153 18.4902C5.71347 18.0425 4.78101 17.4014 3.9801 16.5848C3.17919 15.7682 2.55048 14.8175 2.11147 13.7592C1.65712 12.6639 1.42678 11.5 1.42678 10.2997C1.42678 9.09939 1.65712 7.93544 2.11147 6.84021C2.55048 5.78189 3.17919 4.83117 3.9801 4.01455C4.78101 3.19793 5.71347 2.55684 6.75153 2.10917C7.82579 1.64586 8.96748 1.41097 10.1448 1.41097Z" fill="#E0DEF4" stroke="#E0DEF4" stroke-width="0.0396276"/>
+<path d="M12.307 9.31686L12.2911 9.32265L12.2829 9.30788L10.3375 5.81287C10.2345 5.62788 9.97412 5.62594 9.86848 5.80932L8.00237 9.04954C7.92692 9.18052 7.77059 9.23856 7.6299 9.18728L7.63668 9.16866L7.62989 9.18728L4.52463 8.05537C4.32303 7.98188 4.12021 8.16545 4.17001 8.37971L5.64282 14.7133L5.62352 14.7178L5.64282 14.7133C5.67185 14.8382 5.7811 14.926 5.90638 14.926H14.386C14.5113 14.926 14.6205 14.8382 14.6495 14.7133L16.1223 8.37971C16.1721 8.16545 15.9693 7.98188 15.7677 8.05537L12.307 9.31686ZM8.32492 10.0322L8.34209 10.0421L8.32492 10.0322L9.82225 7.43234C9.94328 7.22225 10.2423 7.22451 10.3602 7.43639L11.8305 10.0778C11.8956 10.1948 12.0334 10.2468 12.1571 10.2017L14.7019 9.27405C14.9367 9.18849 15.1683 9.40489 15.1075 9.64942L14.0624 13.8509C14.0276 13.991 13.9037 14.0895 13.7614 14.0895H6.58468C6.44358 14.0895 6.32056 13.9926 6.28455 13.8542L5.19245 9.65516C5.12865 9.40987 5.36099 9.19038 5.59721 9.27652L8.00039 10.1525C8.12263 10.1971 8.25894 10.1468 8.32492 10.0322Z" fill="#E0DEF4" stroke="#E0DEF4" stroke-width="0.0396276"/>
+</svg></span></div>
+          <div class="table_order__rows">
+            <div class="table_order__row">
+              <div class="tb_item w-20 px-20"><span class="title">Android</span></div>
+              <div class="tb_item w-50 px-12"><span class="title md-fz-15">Золотые рубли золотые рубли золот...</span></div>
+              <div class="tb_item flex-center w-10"><span class="title fz-13">13 000</span></div>
+              <div class="tb_item w-30 px-14">
+                <div class="user_card">
+                  <div class="user_card__image"><img class="lazyload" data-src="img/review/avatar1.png" src="#" alt="image"></div>
+                  <div class="user_card__right">
+                    <div class="title">Вундервафля2004КрутойМамкинНагибатор<span class="online"></span></div>
+                    <div class="flex">
+                      <div class="rating"><svg width="15" height="15" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M7.38086 0.604736L9.06471 5.78711H14.5138L10.1054 8.98999L11.7892 14.1724L7.38086 10.9695L2.97247 14.1724L4.65632 8.98999L0.247935 5.78711H5.697L7.38086 0.604736Z" fill="#F3CF89"/>
+</svg>
+<svg width="15" height="15" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M7.38086 0.604736L9.06471 5.78711H14.5138L10.1054 8.98999L11.7892 14.1724L7.38086 10.9695L2.97247 14.1724L4.65632 8.98999L0.247935 5.78711H5.697L7.38086 0.604736Z" fill="#F3CF89"/>
+</svg>
+<svg width="15" height="15" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M7.38086 0.604736L9.06471 5.78711H14.5138L10.1054 8.98999L11.7892 14.1724L7.38086 10.9695L2.97247 14.1724L4.65632 8.98999L0.247935 5.78711H5.697L7.38086 0.604736Z" fill="#F3CF89"/>
+</svg>
+<svg width="15" height="15" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M7.38086 0.604736L9.06471 5.78711H14.5138L10.1054 8.98999L11.7892 14.1724L7.38086 10.9695L2.97247 14.1724L4.65632 8.98999L0.247935 5.78711H5.697L7.38086 0.604736Z" fill="#F3CF89"/>
+</svg>
+<svg width="15" height="15" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M7.38086 0.604736L9.06471 5.78711H14.5138L10.1054 8.98999L11.7892 14.1724L7.38086 10.9695L2.97247 14.1724L4.65632 8.98999L0.247935 5.78711H5.697L7.38086 0.604736Z" fill="#F3CF89"/>
+</svg>
+                      </div><span class="date">на сайте 1 месяц</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="tb_item flex-center w-10"><span class="title fz-13">13 000</span></div>
+            </div>
+            <div class="table_order__row">
+              <div class="tb_item w-20 px-20"><span class="title">IOS</span></div>
+              <div class="tb_item w-50 px-12"><span class="title">Серебрянные кубки </span></div>
+              <div class="tb_item flex-center w-10"><span class="title fz-13">500</span></div>
+              <div class="tb_item w-30 px-14">
+                <div class="user_card">
+                  <div class="user_card__image"><img class="lazyload" data-src="img/review/avatar1.png" src="#" alt="image"></div>
+                  <div class="user_card__right">
+                    <div class="title">Lightning4444<span class="online"></span></div>
+                    <div class="flex">
+                      <div class="rating"><svg width="15" height="15" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M7.38086 0.604736L9.06471 5.78711H14.5138L10.1054 8.98999L11.7892 14.1724L7.38086 10.9695L2.97247 14.1724L4.65632 8.98999L0.247935 5.78711H5.697L7.38086 0.604736Z" fill="#F3CF89"/>
+</svg>
+<svg width="15" height="15" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M7.38086 0.604736L9.06471 5.78711H14.5138L10.1054 8.98999L11.7892 14.1724L7.38086 10.9695L2.97247 14.1724L4.65632 8.98999L0.247935 5.78711H5.697L7.38086 0.604736Z" fill="#F3CF89"/>
+</svg>
+<svg width="15" height="15" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M7.38086 0.604736L9.06471 5.78711H14.5138L10.1054 8.98999L11.7892 14.1724L7.38086 10.9695L2.97247 14.1724L4.65632 8.98999L0.247935 5.78711H5.697L7.38086 0.604736Z" fill="#F3CF89"/>
+</svg>
+                      </div><span class="date">на сайте 1 месяц</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="tb_item flex-center w-10"><span class="title fz-13">13 000</span></div>
+            </div>
+            <div class="table_order__row">
+              <div class="tb_item w-20 px-20"><span class="title">IOS</span></div>
+              <div class="tb_item w-50 px-12"><span class="title">Серебрянные кубки </span></div>
+              <div class="tb_item flex-center w-10"><span class="title fz-13">500</span></div>
+              <div class="tb_item w-30 px-14">
+                <div class="user_card">
+                  <div class="user_card__image"><img class="lazyload" data-src="img/review/avatar1.png" src="#" alt="image"></div>
+                  <div class="user_card__right">
+                    <div class="title">Lightning4444<span class="online"></span></div>
+                    <div class="flex">
+                      <div class="rating"><svg width="15" height="15" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M7.38086 0.604736L9.06471 5.78711H14.5138L10.1054 8.98999L11.7892 14.1724L7.38086 10.9695L2.97247 14.1724L4.65632 8.98999L0.247935 5.78711H5.697L7.38086 0.604736Z" fill="#F3CF89"/>
+</svg>
+<svg width="15" height="15" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M7.38086 0.604736L9.06471 5.78711H14.5138L10.1054 8.98999L11.7892 14.1724L7.38086 10.9695L2.97247 14.1724L4.65632 8.98999L0.247935 5.78711H5.697L7.38086 0.604736Z" fill="#F3CF89"/>
+</svg>
+<svg width="15" height="15" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M7.38086 0.604736L9.06471 5.78711H14.5138L10.1054 8.98999L11.7892 14.1724L7.38086 10.9695L2.97247 14.1724L4.65632 8.98999L0.247935 5.78711H5.697L7.38086 0.604736Z" fill="#F3CF89"/>
+</svg>
+                      </div><span class="date">на сайте 1 месяц</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="tb_item flex-center w-10"><span class="title fz-13">13 000</span></div>
+            </div>
+            <div class="table_order__row">
+              <div class="tb_item w-20 px-20"><span class="title">Android</span></div>
+              <div class="tb_item w-50 px-12"><span class="title">Золотые рубли золотые рубли золот...</span></div>
+              <div class="tb_item flex-center w-10"><span class="title fz-13">13 000</span></div>
+              <div class="tb_item w-30 px-14">
+                <div class="user_card">
+                  <div class="user_card__image"><img class="lazyload" data-src="img/review/avatar1.png" src="#" alt="image"></div>
+                  <div class="user_card__right">
+                    <div class="title">Вундервафля2004КрутойМамкинНагибатор<span class="online"></span></div>
+                    <div class="flex">
+                      <div class="rating"><svg width="15" height="15" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M7.38086 0.604736L9.06471 5.78711H14.5138L10.1054 8.98999L11.7892 14.1724L7.38086 10.9695L2.97247 14.1724L4.65632 8.98999L0.247935 5.78711H5.697L7.38086 0.604736Z" fill="#F3CF89"/>
+</svg>
+<svg width="15" height="15" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M7.38086 0.604736L9.06471 5.78711H14.5138L10.1054 8.98999L11.7892 14.1724L7.38086 10.9695L2.97247 14.1724L4.65632 8.98999L0.247935 5.78711H5.697L7.38086 0.604736Z" fill="#F3CF89"/>
+</svg>
+<svg width="15" height="15" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M7.38086 0.604736L9.06471 5.78711H14.5138L10.1054 8.98999L11.7892 14.1724L7.38086 10.9695L2.97247 14.1724L4.65632 8.98999L0.247935 5.78711H5.697L7.38086 0.604736Z" fill="#F3CF89"/>
+</svg>
+<svg width="15" height="15" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M7.38086 0.604736L9.06471 5.78711H14.5138L10.1054 8.98999L11.7892 14.1724L7.38086 10.9695L2.97247 14.1724L4.65632 8.98999L0.247935 5.78711H5.697L7.38086 0.604736Z" fill="#F3CF89"/>
+</svg>
+<svg width="15" height="15" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M7.38086 0.604736L9.06471 5.78711H14.5138L10.1054 8.98999L11.7892 14.1724L7.38086 10.9695L2.97247 14.1724L4.65632 8.98999L0.247935 5.78711H5.697L7.38086 0.604736Z" fill="#F3CF89"/>
+</svg>
+                      </div><span class="date">на сайте 1 месяц</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="tb_item flex-center w-10"><span class="title fz-13">13 000</span></div>
+            </div>
+            <div class="table_order__row">
+              <div class="tb_item w-20 px-20"><span class="title">Android</span></div>
+              <div class="tb_item w-50 px-12"><span class="title">Золотые рубли золотые рубли золот...</span></div>
+              <div class="tb_item flex-center w-10"><span class="title fz-13">13 000</span></div>
+              <div class="tb_item w-30 px-14">
+                <div class="user_card">
+                  <div class="user_card__image"><img class="lazyload" data-src="img/review/avatar1.png" src="#" alt="image"></div>
+                  <div class="user_card__right">
+                    <div class="title">Вундервафля2004КрутойМамкинНагибатор<span class="online"></span></div>
+                    <div class="flex">
+                      <div class="rating"><svg width="15" height="15" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M7.38086 0.604736L9.06471 5.78711H14.5138L10.1054 8.98999L11.7892 14.1724L7.38086 10.9695L2.97247 14.1724L4.65632 8.98999L0.247935 5.78711H5.697L7.38086 0.604736Z" fill="#F3CF89"/>
+</svg>
+<svg width="15" height="15" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M7.38086 0.604736L9.06471 5.78711H14.5138L10.1054 8.98999L11.7892 14.1724L7.38086 10.9695L2.97247 14.1724L4.65632 8.98999L0.247935 5.78711H5.697L7.38086 0.604736Z" fill="#F3CF89"/>
+</svg>
+<svg width="15" height="15" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M7.38086 0.604736L9.06471 5.78711H14.5138L10.1054 8.98999L11.7892 14.1724L7.38086 10.9695L2.97247 14.1724L4.65632 8.98999L0.247935 5.78711H5.697L7.38086 0.604736Z" fill="#F3CF89"/>
+</svg>
+<svg width="15" height="15" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M7.38086 0.604736L9.06471 5.78711H14.5138L10.1054 8.98999L11.7892 14.1724L7.38086 10.9695L2.97247 14.1724L4.65632 8.98999L0.247935 5.78711H5.697L7.38086 0.604736Z" fill="#F3CF89"/>
+</svg>
+<svg width="15" height="15" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M7.38086 0.604736L9.06471 5.78711H14.5138L10.1054 8.98999L11.7892 14.1724L7.38086 10.9695L2.97247 14.1724L4.65632 8.98999L0.247935 5.78711H5.697L7.38086 0.604736Z" fill="#F3CF89"/>
+</svg>
+                      </div><span class="date">на сайте 1 месяц</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="tb_item flex-center w-10"><span class="title fz-13">13 000</span></div>
+            </div>
+            <div class="table_order__row">
+              <div class="tb_item w-20 px-20"><span class="title">IOS</span></div>
+              <div class="tb_item w-50 px-12"><span class="title">Серебрянные кубки </span></div>
+              <div class="tb_item flex-center w-10"><span class="title fz-13">500</span></div>
+              <div class="tb_item w-30 px-14">
+                <div class="user_card">
+                  <div class="user_card__image"><img class="lazyload" data-src="img/review/avatar1.png" src="#" alt="image"></div>
+                  <div class="user_card__right">
+                    <div class="title">Lightning4444<span class="online"></span></div>
+                    <div class="flex">
+                      <div class="rating"><svg width="15" height="15" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M7.38086 0.604736L9.06471 5.78711H14.5138L10.1054 8.98999L11.7892 14.1724L7.38086 10.9695L2.97247 14.1724L4.65632 8.98999L0.247935 5.78711H5.697L7.38086 0.604736Z" fill="#F3CF89"/>
+</svg>
+<svg width="15" height="15" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M7.38086 0.604736L9.06471 5.78711H14.5138L10.1054 8.98999L11.7892 14.1724L7.38086 10.9695L2.97247 14.1724L4.65632 8.98999L0.247935 5.78711H5.697L7.38086 0.604736Z" fill="#F3CF89"/>
+</svg>
+<svg width="15" height="15" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M7.38086 0.604736L9.06471 5.78711H14.5138L10.1054 8.98999L11.7892 14.1724L7.38086 10.9695L2.97247 14.1724L4.65632 8.98999L0.247935 5.78711H5.697L7.38086 0.604736Z" fill="#F3CF89"/>
+</svg>
+                      </div><span class="date">на сайте 1 месяц</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="tb_item flex-center w-10"><span class="title fz-13">13 000</span></div>
+            </div>
+            <div class="table_order__row">
+              <div class="tb_item w-20 px-20"><span class="title">Android</span></div>
+              <div class="tb_item w-50 px-12"><span class="title">Золотые рубли золотые рубли золот...</span></div>
+              <div class="tb_item flex-center w-10"><span class="title fz-13">13 000</span></div>
+              <div class="tb_item w-30 px-14">
+                <div class="user_card">
+                  <div class="user_card__image"><img class="lazyload" data-src="img/review/avatar1.png" src="#" alt="image"></div>
+                  <div class="user_card__right">
+                    <div class="title">Вундервафля2004КрутойМамкинНагибатор<span class="online"></span></div>
+                    <div class="flex">
+                      <div class="rating"><svg width="15" height="15" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M7.38086 0.604736L9.06471 5.78711H14.5138L10.1054 8.98999L11.7892 14.1724L7.38086 10.9695L2.97247 14.1724L4.65632 8.98999L0.247935 5.78711H5.697L7.38086 0.604736Z" fill="#F3CF89"/>
+</svg>
+<svg width="15" height="15" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M7.38086 0.604736L9.06471 5.78711H14.5138L10.1054 8.98999L11.7892 14.1724L7.38086 10.9695L2.97247 14.1724L4.65632 8.98999L0.247935 5.78711H5.697L7.38086 0.604736Z" fill="#F3CF89"/>
+</svg>
+<svg width="15" height="15" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M7.38086 0.604736L9.06471 5.78711H14.5138L10.1054 8.98999L11.7892 14.1724L7.38086 10.9695L2.97247 14.1724L4.65632 8.98999L0.247935 5.78711H5.697L7.38086 0.604736Z" fill="#F3CF89"/>
+</svg>
+<svg width="15" height="15" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M7.38086 0.604736L9.06471 5.78711H14.5138L10.1054 8.98999L11.7892 14.1724L7.38086 10.9695L2.97247 14.1724L4.65632 8.98999L0.247935 5.78711H5.697L7.38086 0.604736Z" fill="#F3CF89"/>
+</svg>
+<svg width="15" height="15" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M7.38086 0.604736L9.06471 5.78711H14.5138L10.1054 8.98999L11.7892 14.1724L7.38086 10.9695L2.97247 14.1724L4.65632 8.98999L0.247935 5.78711H5.697L7.38086 0.604736Z" fill="#F3CF89"/>
+</svg>
+                      </div><span class="date">на сайте 1 месяц</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="tb_item flex-center w-10"><span class="title fz-13">13 000	</span></div>
+            </div>
+            <div class="table_order__row">
+              <div class="tb_item w-20 px-20"><span class="title">Android</span></div>
+              <div class="tb_item w-50 px-12"><span class="title">Золотые рубли золотые рубли золот...</span></div>
+              <div class="tb_item flex-center w-10"><span class="title fz-13">13 000</span></div>
+              <div class="tb_item w-30 px-14">
+                <div class="user_card">
+                  <div class="user_card__image"><img class="lazyload" data-src="img/review/avatar1.png" src="#" alt="image"></div>
+                  <div class="user_card__right">
+                    <div class="title">Вундервафля2004КрутойМамкинНагибатор<span class="online"></span></div>
+                    <div class="flex">
+                      <div class="rating"><svg width="15" height="15" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M7.38086 0.604736L9.06471 5.78711H14.5138L10.1054 8.98999L11.7892 14.1724L7.38086 10.9695L2.97247 14.1724L4.65632 8.98999L0.247935 5.78711H5.697L7.38086 0.604736Z" fill="#F3CF89"/>
+</svg>
+<svg width="15" height="15" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M7.38086 0.604736L9.06471 5.78711H14.5138L10.1054 8.98999L11.7892 14.1724L7.38086 10.9695L2.97247 14.1724L4.65632 8.98999L0.247935 5.78711H5.697L7.38086 0.604736Z" fill="#F3CF89"/>
+</svg>
+<svg width="15" height="15" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M7.38086 0.604736L9.06471 5.78711H14.5138L10.1054 8.98999L11.7892 14.1724L7.38086 10.9695L2.97247 14.1724L4.65632 8.98999L0.247935 5.78711H5.697L7.38086 0.604736Z" fill="#F3CF89"/>
+</svg>
+<svg width="15" height="15" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M7.38086 0.604736L9.06471 5.78711H14.5138L10.1054 8.98999L11.7892 14.1724L7.38086 10.9695L2.97247 14.1724L4.65632 8.98999L0.247935 5.78711H5.697L7.38086 0.604736Z" fill="#F3CF89"/>
+</svg>
+<svg width="15" height="15" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M7.38086 0.604736L9.06471 5.78711H14.5138L10.1054 8.98999L11.7892 14.1724L7.38086 10.9695L2.97247 14.1724L4.65632 8.98999L0.247935 5.78711H5.697L7.38086 0.604736Z" fill="#F3CF89"/>
+</svg>
+                      </div><span class="date">на сайте 1 месяц</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="tb_item flex-center w-10"><span class="title fz-13">13 000</span></div>
+            </div>
+            <div class="table_order__row">
+              <div class="tb_item w-20 px-20"><span class="title">IOS</span></div>
+              <div class="tb_item w-50 px-12"><span class="title">Серебрянные кубки </span></div>
+              <div class="tb_item flex-center w-10"><span class="title fz-13">500</span></div>
+              <div class="tb_item w-30 px-14">
+                <div class="user_card">
+                  <div class="user_card__image"><img class="lazyload" data-src="img/review/avatar1.png" src="#" alt="image"></div>
+                  <div class="user_card__right">
+                    <div class="title">Lightning4444<span class="online"></span></div>
+                    <div class="flex">
+                      <div class="rating"><svg width="15" height="15" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M7.38086 0.604736L9.06471 5.78711H14.5138L10.1054 8.98999L11.7892 14.1724L7.38086 10.9695L2.97247 14.1724L4.65632 8.98999L0.247935 5.78711H5.697L7.38086 0.604736Z" fill="#F3CF89"/>
+</svg>
+<svg width="15" height="15" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M7.38086 0.604736L9.06471 5.78711H14.5138L10.1054 8.98999L11.7892 14.1724L7.38086 10.9695L2.97247 14.1724L4.65632 8.98999L0.247935 5.78711H5.697L7.38086 0.604736Z" fill="#F3CF89"/>
+</svg>
+<svg width="15" height="15" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M7.38086 0.604736L9.06471 5.78711H14.5138L10.1054 8.98999L11.7892 14.1724L7.38086 10.9695L2.97247 14.1724L4.65632 8.98999L0.247935 5.78711H5.697L7.38086 0.604736Z" fill="#F3CF89"/>
+</svg>
+                      </div><span class="date">на сайте 1 месяц</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="tb_item flex-center w-10"><span class="title fz-13">13 000</span></div>
+            </div>
+            <div class="table_order__row">
+              <div class="tb_item w-20 px-20"><span class="title">Android</span></div>
+              <div class="tb_item w-50 px-12"><span class="title">Золотые рубли золотые рубли золот...</span></div>
+              <div class="tb_item flex-center w-10"><span class="title fz-13">13 000</span></div>
+              <div class="tb_item w-30 px-14">
+                <div class="user_card">
+                  <div class="user_card__image"><img class="lazyload" data-src="img/review/avatar1.png" src="#" alt="image"></div>
+                  <div class="user_card__right">
+                    <div class="title">Вундервафля2004КрутойМамкинНагибатор<span class="online"></span></div>
+                    <div class="flex">
+                      <div class="rating"><svg width="15" height="15" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M7.38086 0.604736L9.06471 5.78711H14.5138L10.1054 8.98999L11.7892 14.1724L7.38086 10.9695L2.97247 14.1724L4.65632 8.98999L0.247935 5.78711H5.697L7.38086 0.604736Z" fill="#F3CF89"/>
+</svg>
+<svg width="15" height="15" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M7.38086 0.604736L9.06471 5.78711H14.5138L10.1054 8.98999L11.7892 14.1724L7.38086 10.9695L2.97247 14.1724L4.65632 8.98999L0.247935 5.78711H5.697L7.38086 0.604736Z" fill="#F3CF89"/>
+</svg>
+<svg width="15" height="15" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M7.38086 0.604736L9.06471 5.78711H14.5138L10.1054 8.98999L11.7892 14.1724L7.38086 10.9695L2.97247 14.1724L4.65632 8.98999L0.247935 5.78711H5.697L7.38086 0.604736Z" fill="#F3CF89"/>
+</svg>
+<svg width="15" height="15" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M7.38086 0.604736L9.06471 5.78711H14.5138L10.1054 8.98999L11.7892 14.1724L7.38086 10.9695L2.97247 14.1724L4.65632 8.98999L0.247935 5.78711H5.697L7.38086 0.604736Z" fill="#F3CF89"/>
+</svg>
+<svg width="15" height="15" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M7.38086 0.604736L9.06471 5.78711H14.5138L10.1054 8.98999L11.7892 14.1724L7.38086 10.9695L2.97247 14.1724L4.65632 8.98999L0.247935 5.78711H5.697L7.38086 0.604736Z" fill="#F3CF89"/>
+</svg>
+                      </div><span class="date">на сайте 1 месяц</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="tb_item flex-center w-10"><span class="title fz-13">13 000	</span></div>
+            </div>
+            <div class="table_order__row">
+              <div class="tb_item w-20 px-20"><span class="title">Android</span></div>
+              <div class="tb_item w-50 px-12"><span class="title">Золотые рубли золотые рубли золот...</span></div>
+              <div class="tb_item flex-center w-10"><span class="title fz-13">13 000</span></div>
+              <div class="tb_item w-30 px-14">
+                <div class="user_card">
+                  <div class="user_card__image"><img class="lazyload" data-src="img/review/avatar1.png" src="#" alt="image"></div>
+                  <div class="user_card__right">
+                    <div class="title">Вундервафля2004КрутойМамкинНагибатор<span class="online"></span></div>
+                    <div class="flex">
+                      <div class="rating"><svg width="15" height="15" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M7.38086 0.604736L9.06471 5.78711H14.5138L10.1054 8.98999L11.7892 14.1724L7.38086 10.9695L2.97247 14.1724L4.65632 8.98999L0.247935 5.78711H5.697L7.38086 0.604736Z" fill="#F3CF89"/>
+</svg>
+<svg width="15" height="15" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M7.38086 0.604736L9.06471 5.78711H14.5138L10.1054 8.98999L11.7892 14.1724L7.38086 10.9695L2.97247 14.1724L4.65632 8.98999L0.247935 5.78711H5.697L7.38086 0.604736Z" fill="#F3CF89"/>
+</svg>
+<svg width="15" height="15" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M7.38086 0.604736L9.06471 5.78711H14.5138L10.1054 8.98999L11.7892 14.1724L7.38086 10.9695L2.97247 14.1724L4.65632 8.98999L0.247935 5.78711H5.697L7.38086 0.604736Z" fill="#F3CF89"/>
+</svg>
+<svg width="15" height="15" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M7.38086 0.604736L9.06471 5.78711H14.5138L10.1054 8.98999L11.7892 14.1724L7.38086 10.9695L2.97247 14.1724L4.65632 8.98999L0.247935 5.78711H5.697L7.38086 0.604736Z" fill="#F3CF89"/>
+</svg>
+<svg width="15" height="15" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M7.38086 0.604736L9.06471 5.78711H14.5138L10.1054 8.98999L11.7892 14.1724L7.38086 10.9695L2.97247 14.1724L4.65632 8.98999L0.247935 5.78711H5.697L7.38086 0.604736Z" fill="#F3CF89"/>
+</svg>
+                      </div><span class="date">на сайте 1 месяц</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="tb_item flex-center w-10"><span class="title fz-13">13 000</span></div>
+            </div>
+            <div class="table_order__row">
+              <div class="tb_item w-20 px-20"><span class="title">IOS</span></div>
+              <div class="tb_item w-50 px-12"><span class="title">Серебрянные кубки </span></div>
+              <div class="tb_item flex-center w-10"><span class="title fz-13">500</span></div>
+              <div class="tb_item w-30 px-14">
+                <div class="user_card">
+                  <div class="user_card__image"><img class="lazyload" data-src="img/review/avatar1.png" src="#" alt="image"></div>
+                  <div class="user_card__right">
+                    <div class="title">Lightning4444<span class="online"></span></div>
+                    <div class="flex">
+                      <div class="rating"><svg width="15" height="15" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M7.38086 0.604736L9.06471 5.78711H14.5138L10.1054 8.98999L11.7892 14.1724L7.38086 10.9695L2.97247 14.1724L4.65632 8.98999L0.247935 5.78711H5.697L7.38086 0.604736Z" fill="#F3CF89"/>
+</svg>
+<svg width="15" height="15" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M7.38086 0.604736L9.06471 5.78711H14.5138L10.1054 8.98999L11.7892 14.1724L7.38086 10.9695L2.97247 14.1724L4.65632 8.98999L0.247935 5.78711H5.697L7.38086 0.604736Z" fill="#F3CF89"/>
+</svg>
+<svg width="15" height="15" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M7.38086 0.604736L9.06471 5.78711H14.5138L10.1054 8.98999L11.7892 14.1724L7.38086 10.9695L2.97247 14.1724L4.65632 8.98999L0.247935 5.78711H5.697L7.38086 0.604736Z" fill="#F3CF89"/>
+</svg>
+                      </div><span class="date">на сайте 1 месяц</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="tb_item flex-center w-10"><span class="title fz-13">13 000</span></div>
+            </div>
+            <div class="table_order__row">
+              <div class="tb_item w-20 px-20"><span class="title">Android</span></div>
+              <div class="tb_item w-50 px-12"><span class="title">Золотые рубли золотые рубли золот...</span></div>
+              <div class="tb_item flex-center w-10"><span class="title fz-13">13 000</span></div>
+              <div class="tb_item w-30 px-14">
+                <div class="user_card">
+                  <div class="user_card__image"><img class="lazyload" data-src="img/review/avatar1.png" src="#" alt="image"></div>
+                  <div class="user_card__right">
+                    <div class="title">Вундервафля2004КрутойМамкинНагибатор<span class="online"></span></div>
+                    <div class="flex">
+                      <div class="rating"><svg width="15" height="15" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M7.38086 0.604736L9.06471 5.78711H14.5138L10.1054 8.98999L11.7892 14.1724L7.38086 10.9695L2.97247 14.1724L4.65632 8.98999L0.247935 5.78711H5.697L7.38086 0.604736Z" fill="#F3CF89"/>
+</svg>
+<svg width="15" height="15" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M7.38086 0.604736L9.06471 5.78711H14.5138L10.1054 8.98999L11.7892 14.1724L7.38086 10.9695L2.97247 14.1724L4.65632 8.98999L0.247935 5.78711H5.697L7.38086 0.604736Z" fill="#F3CF89"/>
+</svg>
+<svg width="15" height="15" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M7.38086 0.604736L9.06471 5.78711H14.5138L10.1054 8.98999L11.7892 14.1724L7.38086 10.9695L2.97247 14.1724L4.65632 8.98999L0.247935 5.78711H5.697L7.38086 0.604736Z" fill="#F3CF89"/>
+</svg>
+<svg width="15" height="15" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M7.38086 0.604736L9.06471 5.78711H14.5138L10.1054 8.98999L11.7892 14.1724L7.38086 10.9695L2.97247 14.1724L4.65632 8.98999L0.247935 5.78711H5.697L7.38086 0.604736Z" fill="#F3CF89"/>
+</svg>
+<svg width="15" height="15" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M7.38086 0.604736L9.06471 5.78711H14.5138L10.1054 8.98999L11.7892 14.1724L7.38086 10.9695L2.97247 14.1724L4.65632 8.98999L0.247935 5.78711H5.697L7.38086 0.604736Z" fill="#F3CF89"/>
+</svg>
+                      </div><span class="date">на сайте 1 месяц</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="tb_item flex-center w-10"><span class="title fz-13">13 000	</span></div>
+            </div>
+            <div class="table_order__row">
+              <div class="tb_item w-20 px-20"><span class="title">Android</span></div>
+              <div class="tb_item w-50 px-12"><span class="title">Золотые рубли золотые рубли золот...</span></div>
+              <div class="tb_item flex-center w-10"><span class="title fz-13">13 000</span></div>
+              <div class="tb_item w-30 px-14">
+                <div class="user_card">
+                  <div class="user_card__image"><img class="lazyload" data-src="img/review/avatar1.png" src="#" alt="image"></div>
+                  <div class="user_card__right">
+                    <div class="title">Вундервафля2004КрутойМамкинНагибатор<span class="online"></span></div>
+                    <div class="flex">
+                      <div class="rating"><svg width="15" height="15" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M7.38086 0.604736L9.06471 5.78711H14.5138L10.1054 8.98999L11.7892 14.1724L7.38086 10.9695L2.97247 14.1724L4.65632 8.98999L0.247935 5.78711H5.697L7.38086 0.604736Z" fill="#F3CF89"/>
+</svg>
+<svg width="15" height="15" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M7.38086 0.604736L9.06471 5.78711H14.5138L10.1054 8.98999L11.7892 14.1724L7.38086 10.9695L2.97247 14.1724L4.65632 8.98999L0.247935 5.78711H5.697L7.38086 0.604736Z" fill="#F3CF89"/>
+</svg>
+<svg width="15" height="15" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M7.38086 0.604736L9.06471 5.78711H14.5138L10.1054 8.98999L11.7892 14.1724L7.38086 10.9695L2.97247 14.1724L4.65632 8.98999L0.247935 5.78711H5.697L7.38086 0.604736Z" fill="#F3CF89"/>
+</svg>
+<svg width="15" height="15" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M7.38086 0.604736L9.06471 5.78711H14.5138L10.1054 8.98999L11.7892 14.1724L7.38086 10.9695L2.97247 14.1724L4.65632 8.98999L0.247935 5.78711H5.697L7.38086 0.604736Z" fill="#F3CF89"/>
+</svg>
+<svg width="15" height="15" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M7.38086 0.604736L9.06471 5.78711H14.5138L10.1054 8.98999L11.7892 14.1724L7.38086 10.9695L2.97247 14.1724L4.65632 8.98999L0.247935 5.78711H5.697L7.38086 0.604736Z" fill="#F3CF89"/>
+</svg>
+                      </div><span class="date">на сайте 1 месяц</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="tb_item flex-center w-10"><span class="title fz-13">13 000</span></div>
+            </div>
+            <div class="table_order__row">
+              <div class="tb_item w-20 px-20"><span class="title">IOS</span></div>
+              <div class="tb_item w-50 px-12"><span class="title">Серебрянные кубки </span></div>
+              <div class="tb_item flex-center w-10"><span class="title fz-13">500</span></div>
+              <div class="tb_item w-30 px-14">
+                <div class="user_card">
+                  <div class="user_card__image"><img class="lazyload" data-src="img/review/avatar1.png" src="#" alt="image"></div>
+                  <div class="user_card__right">
+                    <div class="title">Lightning4444<span class="online"></span></div>
+                    <div class="flex">
+                      <div class="rating"><svg width="15" height="15" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M7.38086 0.604736L9.06471 5.78711H14.5138L10.1054 8.98999L11.7892 14.1724L7.38086 10.9695L2.97247 14.1724L4.65632 8.98999L0.247935 5.78711H5.697L7.38086 0.604736Z" fill="#F3CF89"/>
+</svg>
+<svg width="15" height="15" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M7.38086 0.604736L9.06471 5.78711H14.5138L10.1054 8.98999L11.7892 14.1724L7.38086 10.9695L2.97247 14.1724L4.65632 8.98999L0.247935 5.78711H5.697L7.38086 0.604736Z" fill="#F3CF89"/>
+</svg>
+<svg width="15" height="15" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M7.38086 0.604736L9.06471 5.78711H14.5138L10.1054 8.98999L11.7892 14.1724L7.38086 10.9695L2.97247 14.1724L4.65632 8.98999L0.247935 5.78711H5.697L7.38086 0.604736Z" fill="#F3CF89"/>
+</svg>
+                      </div><span class="date">на сайте 1 месяц</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="tb_item flex-center w-10"><span class="title fz-13">13 000</span></div>
+            </div>
+            <div class="table_order__row">
+              <div class="tb_item w-20 px-20"><span class="title">Android</span></div>
+              <div class="tb_item w-50 px-12"><span class="title">Золотые рубли золотые рубли золот...</span></div>
+              <div class="tb_item flex-center w-10"><span class="title fz-13">13 000</span></div>
+              <div class="tb_item w-30 px-14">
+                <div class="user_card">
+                  <div class="user_card__image"><img class="lazyload" data-src="img/review/avatar1.png" src="#" alt="image"></div>
+                  <div class="user_card__right">
+                    <div class="title">Вундервафля2004КрутойМамкинНагибатор<span class="online"></span></div>
+                    <div class="flex">
+                      <div class="rating"><svg width="15" height="15" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M7.38086 0.604736L9.06471 5.78711H14.5138L10.1054 8.98999L11.7892 14.1724L7.38086 10.9695L2.97247 14.1724L4.65632 8.98999L0.247935 5.78711H5.697L7.38086 0.604736Z" fill="#F3CF89"/>
+</svg>
+<svg width="15" height="15" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M7.38086 0.604736L9.06471 5.78711H14.5138L10.1054 8.98999L11.7892 14.1724L7.38086 10.9695L2.97247 14.1724L4.65632 8.98999L0.247935 5.78711H5.697L7.38086 0.604736Z" fill="#F3CF89"/>
+</svg>
+<svg width="15" height="15" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M7.38086 0.604736L9.06471 5.78711H14.5138L10.1054 8.98999L11.7892 14.1724L7.38086 10.9695L2.97247 14.1724L4.65632 8.98999L0.247935 5.78711H5.697L7.38086 0.604736Z" fill="#F3CF89"/>
+</svg>
+<svg width="15" height="15" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M7.38086 0.604736L9.06471 5.78711H14.5138L10.1054 8.98999L11.7892 14.1724L7.38086 10.9695L2.97247 14.1724L4.65632 8.98999L0.247935 5.78711H5.697L7.38086 0.604736Z" fill="#F3CF89"/>
+</svg>
+<svg width="15" height="15" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M7.38086 0.604736L9.06471 5.78711H14.5138L10.1054 8.98999L11.7892 14.1724L7.38086 10.9695L2.97247 14.1724L4.65632 8.98999L0.247935 5.78711H5.697L7.38086 0.604736Z" fill="#F3CF89"/>
+</svg>
+                      </div><span class="date">на сайте 1 месяц</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="tb_item flex-center w-10"><span class="title fz-13">13 000	</span></div>
+            </div>
+            <div class="table_order__row">
+              <div class="tb_item w-20 px-20"><span class="title">Android</span></div>
+              <div class="tb_item w-50 px-12"><span class="title">Золотые рубли золотые рубли золот...</span></div>
+              <div class="tb_item flex-center w-10"><span class="title fz-13">13 000</span></div>
+              <div class="tb_item w-30 px-14">
+                <div class="user_card">
+                  <div class="user_card__image"><img class="lazyload" data-src="img/review/avatar1.png" src="#" alt="image"></div>
+                  <div class="user_card__right">
+                    <div class="title">Вундервафля2004КрутойМамкинНагибатор<span class="online"></span></div>
+                    <div class="flex">
+                      <div class="rating"><svg width="15" height="15" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M7.38086 0.604736L9.06471 5.78711H14.5138L10.1054 8.98999L11.7892 14.1724L7.38086 10.9695L2.97247 14.1724L4.65632 8.98999L0.247935 5.78711H5.697L7.38086 0.604736Z" fill="#F3CF89"/>
+</svg>
+<svg width="15" height="15" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M7.38086 0.604736L9.06471 5.78711H14.5138L10.1054 8.98999L11.7892 14.1724L7.38086 10.9695L2.97247 14.1724L4.65632 8.98999L0.247935 5.78711H5.697L7.38086 0.604736Z" fill="#F3CF89"/>
+</svg>
+<svg width="15" height="15" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M7.38086 0.604736L9.06471 5.78711H14.5138L10.1054 8.98999L11.7892 14.1724L7.38086 10.9695L2.97247 14.1724L4.65632 8.98999L0.247935 5.78711H5.697L7.38086 0.604736Z" fill="#F3CF89"/>
+</svg>
+<svg width="15" height="15" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M7.38086 0.604736L9.06471 5.78711H14.5138L10.1054 8.98999L11.7892 14.1724L7.38086 10.9695L2.97247 14.1724L4.65632 8.98999L0.247935 5.78711H5.697L7.38086 0.604736Z" fill="#F3CF89"/>
+</svg>
+<svg width="15" height="15" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M7.38086 0.604736L9.06471 5.78711H14.5138L10.1054 8.98999L11.7892 14.1724L7.38086 10.9695L2.97247 14.1724L4.65632 8.98999L0.247935 5.78711H5.697L7.38086 0.604736Z" fill="#F3CF89"/>
+</svg>
+                      </div><span class="date">на сайте 1 месяц</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="tb_item flex-center w-10"><span class="title fz-13">13 000</span></div>
+            </div>
+            <div class="table_order__row">
+              <div class="tb_item w-20 px-20"><span class="title">IOS</span></div>
+              <div class="tb_item w-50 px-12"><span class="title">Серебрянные кубки </span></div>
+              <div class="tb_item flex-center w-10"><span class="title fz-13">500</span></div>
+              <div class="tb_item w-30 px-14">
+                <div class="user_card">
+                  <div class="user_card__image"><img class="lazyload" data-src="img/review/avatar1.png" src="#" alt="image"></div>
+                  <div class="user_card__right">
+                    <div class="title">Lightning4444<span class="online"></span></div>
+                    <div class="flex">
+                      <div class="rating"><svg width="15" height="15" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M7.38086 0.604736L9.06471 5.78711H14.5138L10.1054 8.98999L11.7892 14.1724L7.38086 10.9695L2.97247 14.1724L4.65632 8.98999L0.247935 5.78711H5.697L7.38086 0.604736Z" fill="#F3CF89"/>
+</svg>
+<svg width="15" height="15" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M7.38086 0.604736L9.06471 5.78711H14.5138L10.1054 8.98999L11.7892 14.1724L7.38086 10.9695L2.97247 14.1724L4.65632 8.98999L0.247935 5.78711H5.697L7.38086 0.604736Z" fill="#F3CF89"/>
+</svg>
+<svg width="15" height="15" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M7.38086 0.604736L9.06471 5.78711H14.5138L10.1054 8.98999L11.7892 14.1724L7.38086 10.9695L2.97247 14.1724L4.65632 8.98999L0.247935 5.78711H5.697L7.38086 0.604736Z" fill="#F3CF89"/>
+</svg>
+                      </div><span class="date">на сайте 1 месяц</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="tb_item flex-center w-10"><span class="title fz-13">13 000</span></div>
+            </div>
+            <div class="table_order__row">
+              <div class="tb_item w-20 px-20"><span class="title">Android</span></div>
+              <div class="tb_item w-50 px-12"><span class="title">Золотые рубли золотые рубли золот...</span></div>
+              <div class="tb_item flex-center w-10"><span class="title fz-13">13 000</span></div>
+              <div class="tb_item w-30 px-14">
+                <div class="user_card">
+                  <div class="user_card__image"><img class="lazyload" data-src="img/review/avatar1.png" src="#" alt="image"></div>
+                  <div class="user_card__right">
+                    <div class="title">Вундервафля2004КрутойМамкинНагибатор<span class="online"></span></div>
+                    <div class="flex">
+                      <div class="rating"><svg width="15" height="15" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M7.38086 0.604736L9.06471 5.78711H14.5138L10.1054 8.98999L11.7892 14.1724L7.38086 10.9695L2.97247 14.1724L4.65632 8.98999L0.247935 5.78711H5.697L7.38086 0.604736Z" fill="#F3CF89"/>
+</svg>
+<svg width="15" height="15" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M7.38086 0.604736L9.06471 5.78711H14.5138L10.1054 8.98999L11.7892 14.1724L7.38086 10.9695L2.97247 14.1724L4.65632 8.98999L0.247935 5.78711H5.697L7.38086 0.604736Z" fill="#F3CF89"/>
+</svg>
+<svg width="15" height="15" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M7.38086 0.604736L9.06471 5.78711H14.5138L10.1054 8.98999L11.7892 14.1724L7.38086 10.9695L2.97247 14.1724L4.65632 8.98999L0.247935 5.78711H5.697L7.38086 0.604736Z" fill="#F3CF89"/>
+</svg>
+<svg width="15" height="15" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M7.38086 0.604736L9.06471 5.78711H14.5138L10.1054 8.98999L11.7892 14.1724L7.38086 10.9695L2.97247 14.1724L4.65632 8.98999L0.247935 5.78711H5.697L7.38086 0.604736Z" fill="#F3CF89"/>
+</svg>
+<svg width="15" height="15" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M7.38086 0.604736L9.06471 5.78711H14.5138L10.1054 8.98999L11.7892 14.1724L7.38086 10.9695L2.97247 14.1724L4.65632 8.98999L0.247935 5.78711H5.697L7.38086 0.604736Z" fill="#F3CF89"/>
+</svg>
+                      </div><span class="date">на сайте 1 месяц</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="tb_item flex-center w-10"><span class="title fz-13">13 000	</span></div>
+            </div>
+          </div>
+        </div>
+        <div class="page_nav"><a class="button_yellow_border" href="#"><svg width="8" height="12" viewBox="0 0 8 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M7.00047 9.90518L3.12047 6.02518L7.00047 2.14518C7.39047 1.75518 7.39047 1.12518 7.00047 0.735175C6.61047 0.345175 5.98047 0.345175 5.59047 0.735175L1.00047 5.32518C0.610469 5.71518 0.610469 6.34518 1.00047 6.73518L5.59047 11.3252C5.98047 11.7152 6.61047 11.7152 7.00047 11.3252C7.38047 10.9352 7.39047 10.2952 7.00047 9.90518Z" fill="white"/>
+</svg></a>
+          <div class="page_nav__count"><span class="first">1</span><span class="last">7</span></div><a class="button_yellow_border" href="#"><svg width="8" height="12" viewBox="0 0 8 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M0.999531 9.90518L4.87953 6.02518L0.999531 2.14518C0.609531 1.75518 0.609531 1.12518 0.999531 0.735175C1.38953 0.345175 2.01953 0.345175 2.40953 0.735175L6.99953 5.32518C7.38953 5.71518 7.38953 6.34518 6.99953 6.73518L2.40953 11.3252C2.01953 11.7152 1.38953 11.7152 0.999531 11.3252C0.619531 10.9352 0.609531 10.2952 0.999531 9.90518Z" fill="white"/>
+</svg></a>
+        </div>
+      </div>
+    </div>
+    <footer class="footer">
+      <div class="container"><a class="logo" href="/"><img src="img/logo_text.svg" alt="image"></a>
+        <div class="footer__nav">
+          <ul>
+            <li><a href="#">Новости</a></li>
+            <li><a href="#">Отзывы</a></li>
+            <li><a href="#">Правила</a></li>
+            <li><a href="#">FAQ</a></li>
+            <li><a href="#">Администрация</a></li>
+            <li class="last"><a href="mailto:dimaezer@gmail.com">dimaezer@gmail.com</a></li>
+          </ul>
+        </div>
+        <div class="footer__right"><a class="first" href="mailto:dimaezer@gmail.com">dimaezer@gmail.com</a><span class="center">Дизайнер <span>Natalia Horobets</span></span><span class="last">&copy; Все права защищены  </span></div>
+      </div>
+    </footer>
+    <div class="modal_overlay js--modal" id="burger_modal">
+      <div class="modal_overlay__header"><a class="button_yellow_border js--auth-login-active" href="#"><span>Вход</span><i class="arrow"><svg width="18" height="12" viewBox="0 0 18 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M11.3265 0.364516C10.9867 0.704255 10.9928 1.2442 11.3265 1.57787L14.7178 4.96919L1.50437 4.96919C1.03116 4.96919 0.648957 5.35139 0.648957 5.8246C0.648957 6.29781 1.03116 6.68001 1.50437 6.68001L14.7178 6.68001L11.3265 10.0713C10.9928 10.405 10.9928 10.951 11.3265 11.2847C11.6601 11.6184 12.2061 11.6184 12.5398 11.2847L17.3932 6.43128C17.7269 6.09761 17.7269 5.5516 17.3932 5.21792L12.5398 0.364516C12.2061 0.0308439 11.6601 0.0308441 11.3265 0.364516Z"/>
+</svg></i></a>
+        <button class="modal_overlay__close js--modal-close" type="button"><svg width="42" height="42" viewBox="0 0 42 42" fill="none" xmlns="http://www.w3.org/2000/svg">
+<line x1="2.06066" y1="1.5957" x2="40.9999" y2="40.535" stroke="#E0DEF4" stroke-width="1.5" stroke-linecap="round"/>
+<line x1="1" y1="40.535" x2="39.9393" y2="1.59578" stroke="#E0DEF4" stroke-width="1.5" stroke-linecap="round"/>
+</svg>
+        </button>
+      </div>
+      <div class="modal_overlay__nav">
+        <ul>
+          <li><a href="#">Новости</a></li>
+          <li><a href="#">Отзывы</a></li>
+          <li><a href="#">FAQ</a></li>
+          <li><a href="#">Правила</a></li>
+          <li><a href="#">Администрация</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="modal_profie js--modal" id="modal_auth">
+      <div class="modal_profie__wrap"> 
+        <button class="js--modal-close" type="button"><svg width="31" height="30" viewBox="0 0 31 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+<line x1="2.77648" y1="0.834229" x2="30.0001" y2="28.0578" stroke="#B2B1BE" stroke-width="1.5" stroke-linecap="round"/>
+<line x1="1.71582" y1="28.058" x2="28.9394" y2="0.834382" stroke="#B2B1BE" stroke-width="1.5" stroke-linecap="round"/>
+</svg>
+        </button>
+        <div class="modal_profie__tab">
+          <button class="active" type="button">Вход</button>
+          <button type="button">Регистрация</button>
+        </div>
+        <div class="modal_profie__wrap_tb active">
+          <div class="field_set">
+            <input class="field" type="text" placeholder="Ник или почта">
+          </div>
+          <div class="field_set">
+            <input class="field" type="password" placeholder="Пароль">
+            <button class="field_set__visible" type="button"><svg width="22" height="15" viewBox="0 0 22 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path opacity="0.5" d="M11 0C6 0 1.73 3.11 0 7.5C1.73 11.89 6 15 11 15C16 15 20.27 11.89 22 7.5C20.27 3.11 16 0 11 0ZM11 12.5C8.24 12.5 6 10.26 6 7.5C6 4.74 8.24 2.5 11 2.5C13.76 2.5 16 4.74 16 7.5C16 10.26 13.76 12.5 11 12.5ZM11 4.5C9.34 4.5 8 5.84 8 7.5C8 9.16 9.34 10.5 11 10.5C12.66 10.5 14 9.16 14 7.5C14 5.84 12.66 4.5 11 4.5Z"/>
+</svg>
+            </button>
+          </div><a class="forgot" href="#">Я забыл пароль</a>
+          <button class="button_yellow" type="submit"><span>Войти</span></button>
+        </div>
+        <div class="modal_profie__wrap_tb">
+          <div class="field_set">
+            <input class="field" type="text" placeholder="Имя или ник"><span class="field_set__message">Латинские буквы и цифры</span>
+          </div>
+          <div class="field_set">
+            <input class="field" type="text" placeholder="Электронная почта"><span class="field_set__message">Для активации аккаунта</span>
+          </div>
+          <div class="field_set">
+            <input class="field" type="password" placeholder="Пароль"><span class="field_set__message">Минимум 6 символов</span>
+            <button class="field_set__visible" type="button"><svg width="22" height="15" viewBox="0 0 22 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path opacity="0.5" d="M11 0C6 0 1.73 3.11 0 7.5C1.73 11.89 6 15 11 15C16 15 20.27 11.89 22 7.5C20.27 3.11 16 0 11 0ZM11 12.5C8.24 12.5 6 10.26 6 7.5C6 4.74 8.24 2.5 11 2.5C13.76 2.5 16 4.74 16 7.5C16 10.26 13.76 12.5 11 12.5ZM11 4.5C9.34 4.5 8 5.84 8 7.5C8 9.16 9.34 10.5 11 10.5C12.66 10.5 14 9.16 14 7.5C14 5.84 12.66 4.5 11 4.5Z"/>
+</svg>
+            </button>
+          </div>
+          <label class="field_checked">
+            <input type="checkbox" name="checked_auth"><span class="check"><svg width="18" height="14" viewBox="0 0 18 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M5.50109 10.8993L2.00109 7.39929C1.61109 7.00929 0.991094 7.00929 0.601094 7.39929C0.211094 7.78929 0.211094 8.40929 0.601094 8.79929L4.79109 12.9893C5.18109 13.3793 5.81109 13.3793 6.20109 12.9893L16.8011 2.39929C17.1911 2.00929 17.1911 1.38929 16.8011 0.999287C16.4111 0.609287 15.7911 0.609287 15.4011 0.999287L5.50109 10.8993Z" fill="#211F3D"/>
+</svg></span><span class="text"><span>С лицензионным соглашением, включая</span> агентский договор, офертой для продавцов, политикой по обработке персональных данных, правилами сайта <span>ознакомился, принимаю в полном объеме</span> </span>
+          </label>
+          <button class="button_yellow" type="submit"><span>Зарегистрироваться</span></button>
+        </div>
+      </div>
+    </div>
+    <script src="./libs/lazysizes/lazysizes.min.js" defer></script>
+    <script src="./libs/custom-select/custom-select.js" defer></script>
+    <script src="./libs/swiper/swiper-bundle.min.js" defer></script>
+    <script src="./libs/simplebar/simplebar.min.js" defer></script>
+    <script src="./js/common.js" defer></script>
+  </body>
+</html>
