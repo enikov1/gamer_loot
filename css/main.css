@@ -1040,7 +1040,7 @@ body {
   position: relative;
   margin-left: 5.3125rem;
   margin-right: 5.3125rem;
-  margin-bottom: 2.8125rem;
+  margin-bottom: 2rem;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -1079,7 +1079,7 @@ body {
       -ms-flex: 0 0 50%;
           flex: 0 0 50%;
   max-width: 50%;
-  padding: 2.75rem 0;
+  padding: 2rem 0;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -1088,7 +1088,7 @@ body {
   -webkit-justify-content: center;
       -ms-flex-pack: center;
           justify-content: center;
-  font-size: 1.5625rem;
+  font-size: 1.4375rem;
   font-weight: 500;
   color: var(--c-text-gray-light);
 }
@@ -1138,7 +1138,7 @@ body {
 }
 
 .modal_profie__wrap_tb .field_set {
-  margin-top: 1.25rem;
+  margin-top: 0.875rem;
 }
 
 @media (max-width: 767px) {
@@ -1158,11 +1158,11 @@ body {
 }
 
 .modal_profie__wrap_tb .button_yellow {
-  margin-top: 2.5rem;
+  margin-top: 1.25rem;
 }
 
 .modal_profie__wrap_tb .field_checked {
-  margin-top: 3.125rem;
+  margin-top: 1.25rem;
 }
 
 .modal_profie__wrap_tb.active {
