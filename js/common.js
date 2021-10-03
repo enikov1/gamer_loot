@@ -287,6 +287,34 @@ const auth_modal = () => {
 	}
 }
 
+const order_modal = () => {
+	const button_active = document.querySelectorAll('.js--modal-order')
+	
+
+	if (button_active) {
+		// console.log(button_active_data)
+		button_active.forEach(item => {
+
+			const button_active_data = item.getAttribute('data-modal')
+
+			item.addEventListener('click', function(event) {
+				event.preventDefault()
+
+				const modal = document.querySelector(`#${button_active_data}`)
+
+				if (modal) {
+					document.querySelector('html').classList.add('overflow-hidden')
+					modal.classList.add('active')
+				} else {
+					console.log('Not modal container')
+				}
+
+				
+			})
+		})
+	}
+}
+
 const section_news = () => {
     const news_wrap = document.querySelector('.section_news')
 
@@ -415,6 +443,150 @@ const selected = () => {
 	}
 }
 
+const calc_control = () => {
+	const bay_panel = document.querySelectorAll('.bay_panel')
+
+	if(bay_panel) {
+		bay_panel.forEach(e => {
+			const control = e.querySelector('.calc_control')
+
+			if (control) {
+				const minus = control.querySelector('.plus')
+				const plus = control.querySelector('.minus')
+				const input = control.querySelector('.count')
+				const max_count = input.getAttribute('data-max-count')
+
+				let timeout = 0
+
+				minus.addEventListener('mousedown', function () {
+
+					timeout = setInterval(() => {
+						let count = parseInt(input.value) - 1
+
+						count = count < 1 ? 1 : count
+						input.value = count
+					}, 50)
+				})
+
+				minus.addEventListener('touchstart', function () {
+
+					timeout = setInterval(() => {
+						let count = parseInt(input.value) - 1
+
+						count = count < 1 ? 1 : count
+						input.value = count
+					}, 20)
+				})
+
+				minus.addEventListener('mouseup', function () {
+					clearInterval(timeout);
+				})
+
+				minus.addEventListener('touchend', function () {
+					clearInterval(timeout);
+				})
+
+				plus.addEventListener('mousedown', function () {
+
+					timeout = setInterval(() => {
+						let count = parseInt(input.value) + 1
+						input.value = count
+					}, 50)
+				})
+
+				plus.addEventListener('touchstart', function () {
+
+					timeout = setInterval(() => {
+						let count = parseInt(input.value) + 1
+						input.value = count
+					}, 50)
+				})
+
+				plus.addEventListener('mouseup', function () {
+					clearInterval(timeout);
+				})
+
+				plus.addEventListener('touchend', function () {
+					clearInterval(timeout);
+				})
+
+				input.addEventListener('input', function () {
+					if (this.value == 0) {
+						this.value = 1
+					}
+				})
+			}
+
+			
+
+		})
+	}
+}
+
+const inline_user_info = () => {
+
+	const wrap = document.querySelector('.inline_user_info')
+
+	if (wrap) {
+		const swiper = new Swiper(wrap.querySelector('.swiper'), {
+			slidesPerView: 3,
+			spaceBetween: 40,
+
+			pagination: {
+				el: wrap.querySelector('.page_info'),
+				type: "fraction"
+			},
+
+			navigation: {
+				nextEl: wrap.querySelector('.page_next'),
+				prevEl: wrap.querySelector('.page_prev')
+			},
+
+			breakpoints: {
+				'0': {
+					loop: false,
+					slidesPerView: 'auto',
+
+					grid: {
+						rows: 3
+					},
+					spaceBetween: 40,
+
+				},
+				'1200': {
+					loop: true,
+					slidesPerView: 3,
+					spaceBetween: 40,
+
+					grid: {
+						rows: 1,
+					}
+				}
+			}
+		})
+	}
+
+	
+}
+
+const accordion = () => {
+	const accordion_item = document.querySelectorAll('.accordion_item')
+
+	if(accordion_item) {
+		accordion_item.forEach((e, i) => {
+			const button = e.querySelector('.accordion_item__button')
+
+			e.querySelector('.js--count').innerHTML = `${i + 1}. `
+
+			e.addEventListener('click', function(event) {
+				event.preventDefault()
+
+				e.classList.toggle('active')
+			})
+		})
+	}
+}
+
 header()
 section_search_game()
 section_news()
@@ -427,3 +599,8 @@ auth_modal()
 close_modal()
 
 selected()
+calc_control()
+
+inline_user_info()
+accordion()
+order_modal()
