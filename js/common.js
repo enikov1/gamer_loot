@@ -44,13 +44,16 @@ const header = () => {
     const header_burger_btn = document.querySelector('.header .burger')
     const burger_modal = document.getElementById('burger_modal')
 
-    header_burger_btn.addEventListener('click', function(event) {
-        event.preventDefault()
+	if (header_burger_btn) {
+		header_burger_btn.addEventListener('click', function (event) {
+			event.preventDefault()
 
-		document.querySelector('html').classList.add('overflow-hidden')
-        burger_modal.classList.add('active')
-		
-    })
+			document.querySelector('html').classList.add('overflow-hidden')
+			burger_modal.classList.add('active')
+
+		})
+	}
+    
 
 }
 
@@ -216,75 +219,78 @@ const auth_modal = () => {
 	const auth_login_active = document.querySelectorAll('.js--auth-login-active')
 	const auth_register_active = document.querySelectorAll('.js--auth-register-active')
 
-	auth_login_active.forEach(e => {
-		e.addEventListener('click', function(event) {
-			event.preventDefault()
-			event.stopPropagation()
-			document.querySelector('html').classList.add('overflow-hidden')
-			modal_profie.classList.add('active')
-
-			auth_tab_button[0].classList.add('active')
-			auth_tab_button[1].classList.remove('active')
-
-			auth_tab_wrap[0].classList.add('active')
-			auth_tab_wrap[1].classList.remove('active')
-		})
-	})
-
-	auth_register_active.forEach(e => {
-		e.addEventListener('click', function(event) {
-			event.preventDefault()
-			event.stopPropagation()
-			document.querySelector('html').classList.add('overflow-hidden')
-			modal_profie.classList.add('active')
-
-			auth_tab_button[0].classList.remove('active')
-			auth_tab_button[1].classList.add('active')
-
-			auth_tab_wrap[0].classList.remove('active')
-			auth_tab_wrap[1].classList.add('active')
-		})
-	})
-
-	document.addEventListener('click', function (event) {
-		const target = event.target
-		const its_menu = target == modal_profie.querySelector('.modal_profie__wrap') || modal_profie.querySelector('.modal_profie__wrap').contains(target)
-		const its_btn_login = target == auth_login_active
-		const its_btn_register = target == auth_register_active
-		const menu_is_active = modal_profie.classList.contains('active')
-
-		if (!its_menu && !its_btn_login && menu_is_active) {
-			modal_profie.classList.remove('active')
-			
-			if (document.querySelector('html').classList.contains('overflow-hidden')) document.querySelector('html').classList.remove('overflow-hidden')
-		}
-
-		if (!its_menu && !its_btn_register && menu_is_active) {
-			modal_profie.classList.remove('active')
-			
-			if (document.querySelector('html').classList.contains('overflow-hidden')) document.querySelector('html').classList.remove('overflow-hidden')
-		}
-	})
-
-	if (auth_tab_button) {
-		auth_tab_button.forEach((e,i) => {
-			e.addEventListener('click', function(event) {
+	if (modal_profie) {
+		auth_login_active.forEach(e => {
+			e.addEventListener('click', function (event) {
 				event.preventDefault()
+				event.stopPropagation()
+				document.querySelector('html').classList.add('overflow-hidden')
+				modal_profie.classList.add('active')
 
-				for (let item of e.parentNode.children) {
-					item.classList.remove('active')
-				}
+				auth_tab_button[0].classList.add('active')
+				auth_tab_button[1].classList.remove('active')
 
-				e.classList.add('active')
-
-				for (let item of auth_tab_wrap[i].parentNode.children) {
-					item.classList.remove('active')
-				}
-
-				auth_tab_wrap[i].classList.add('active')
+				auth_tab_wrap[0].classList.add('active')
+				auth_tab_wrap[1].classList.remove('active')
 			})
 		})
+
+		auth_register_active.forEach(e => {
+			e.addEventListener('click', function (event) {
+				event.preventDefault()
+				event.stopPropagation()
+				document.querySelector('html').classList.add('overflow-hidden')
+				modal_profie.classList.add('active')
+
+				auth_tab_button[0].classList.remove('active')
+				auth_tab_button[1].classList.add('active')
+
+				auth_tab_wrap[0].classList.remove('active')
+				auth_tab_wrap[1].classList.add('active')
+			})
+		})
+
+		document.addEventListener('click', function (event) {
+			const target = event.target
+			const its_menu = target == modal_profie.querySelector('.modal_profie__wrap') || modal_profie.querySelector('.modal_profie__wrap').contains(target)
+			const its_btn_login = target == auth_login_active
+			const its_btn_register = target == auth_register_active
+			const menu_is_active = modal_profie.classList.contains('active')
+
+			if (!its_menu && !its_btn_login && menu_is_active) {
+				modal_profie.classList.remove('active')
+
+				if (document.querySelector('html').classList.contains('overflow-hidden')) document.querySelector('html').classList.remove('overflow-hidden')
+			}
+
+			if (!its_menu && !its_btn_register && menu_is_active) {
+				modal_profie.classList.remove('active')
+
+				if (document.querySelector('html').classList.contains('overflow-hidden')) document.querySelector('html').classList.remove('overflow-hidden')
+			}
+		})
+
+		if (auth_tab_button) {
+			auth_tab_button.forEach((e, i) => {
+				e.addEventListener('click', function (event) {
+					event.preventDefault()
+
+					for (let item of e.parentNode.children) {
+						item.classList.remove('active')
+					}
+
+					e.classList.add('active')
+
+					for (let item of auth_tab_wrap[i].parentNode.children) {
+						item.classList.remove('active')
+					}
+
+					auth_tab_wrap[i].classList.add('active')
+				})
+			})
+		}
 	}
+	
 }
 
 const order_modal = () => {
@@ -587,6 +593,67 @@ const accordion = () => {
 	}
 }
 
+const chat = () => {
+	const chat_item = document.querySelectorAll('.dialogs_box .item')
+	const main_chat_messages = document.querySelector('.main_chat__messages')
+
+	if (main_chat_messages) {
+		var chat_close = main_chat_messages.querySelector('.prev')
+	}
+
+	
+
+	if(chat_item) {
+
+		
+
+		chat_item.forEach(e => {
+			e.addEventListener('click', function(event) {
+				event.preventDefault()
+
+				main_chat_messages.classList.add('active')
+			})
+
+			chat_close.addEventListener('click', function(event) {
+				event.preventDefault()
+
+				main_chat_messages.classList.remove('active')
+			})
+		})
+	}
+}
+
+const lk_page = () => {
+	const swiper = new Swiper('#lk_bottom_slider', {
+		slidesPerView: 'auto',
+		spaceBetween: 40,
+
+		
+
+		breakpoints: {
+			0: {
+				spaceBetween: 20,
+
+				pagination: {
+					el: "#lk_bottom_slider_fraction",
+					type: "fraction",
+				},
+			},
+
+			900: {
+				slidesPerView: 'auto',
+				spaceBetween: 40,
+
+				scrollbar: {
+					el: "#lk_bottom_slider_scroll",
+					// hide: true,
+					draggable: true,
+				},
+			}
+		}
+	})
+}
+
 header()
 section_search_game()
 section_news()
@@ -603,4 +670,7 @@ calc_control()
 
 inline_user_info()
 accordion()
+chat()
+lk_page()
+
 order_modal()
