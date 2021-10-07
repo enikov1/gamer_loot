@@ -1271,6 +1271,7 @@ button.swiper-pagination-bullet {
   opacity: 0;
   padding: 0;
   margin: 0;
+  display: none;
 }
 
 .ss-content .ss-search input {

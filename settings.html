@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
+    <title>Настройки</title>
+    <link rel="stylesheet" href="css/main.min.css">
+    <link rel="stylesheet" href="css/libs.min.css">
+  </head>
+  <body>
+    <header class="header header_small">
+      <div class="container">
+        <div class="header__top"><a class="logo" href="#"><img src="img/logo.svg" alt="logo"></a>
+          <nav class="header__top_nav">
+            <ul>
+              <li><a href="#">Новости</a></li>
+              <li><a href="#">Отзывы</a></li>
+              <li><a href="#">FAQ</a></li>
+              <li><a href="#">Правила</a></li>
+              <li><a href="#">Администрация</a></li>
+            </ul>
+          </nav>
+          <div class="header__top__right"><a class="profile_link" href="#"><img src="img/avatar.png" alt="image"></a>
+            <button class="burger" type="button"><span class="line"></span><span class="line"></span><span class="line"></span></button>
+          </div>
+        </div>
+      </div>
+    </header>
+    <div class="container">
+      <div class="breadcrumbs"><a href="lk1.html">Личный кабинет</a><span>Настройки</span></div>
+      <div class="sect_border">
+        <h1 class="title">Настройки</h1>
+      </div>
+      <div class="sect_border">
+        <h2 class="subtitle">Профиль</h2>
+        <div class="item">
+          <div class="item__left">
+            <div class="avatar"><img src="img/avatar1.png" alt="image"></div>
+          </div>
+          <div class="item__right">
+            <div class="flex-col">
+              <div class="flex">
+                <button class="button_black w-250 js--modal-order" type="button" data-modal="modal_edit_avatar"><span>Изменить аватарку</span></button>
+                <button class="button_black w-250 js--modal-order" type="button" data-modal="modal_edit_email"><span>Привязать почту</span></button>
+              </div>
+              <div class="flex">
+                <button class="button_black w-250 js--modal-order" type="button" data-modal="modal_edit_password"><span>Изменить пароль</span></button>
+                <button class="button_black w-250" type="button"><span>Кошельки</span></button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="sect_border">
+        <h2 class="subtitle">Оповещения</h2>
+        <div class="item">
+          <div class="item__left">
+            <div class="icon"><svg width="48" height="39" viewBox="0 0 48 39" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M43 0.929688H5C2.3875 0.929688 0.27375 3.06719 0.27375 5.67969L0.25 34.1797C0.25 36.7922 2.3875 38.9297 5 38.9297H43C45.6125 38.9297 47.75 36.7922 47.75 34.1797V5.67969C47.75 3.06719 45.6125 0.929688 43 0.929688ZM40.625 34.1797H7.375C6.06875 34.1797 5 33.1109 5 31.8047V10.4297L21.4825 20.7372C23.0262 21.7109 24.9738 21.7109 26.5175 20.7372L43 10.4297V31.8047C43 33.1109 41.9313 34.1797 40.625 34.1797ZM24 17.5547L5 5.67969H43L24 17.5547Z" fill="#18172A"/>
+</svg>
+            </div>
+          </div>
+          <div class="item__right">
+            <div class="text">
+              <div class="text_title">Оповещения на электронную почту</div>
+              <div class="text_content">Приходят на почту, привязанную к учетной записи. Обещаем не спамить и присылать только самое важное :)</div>
+              <button class="button_black" type="button"><span>Включить</span></button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <footer class="footer">
+      <div class="container"><a class="logo" href="/"><img src="img/logo_text.svg" alt="image"></a>
+        <div class="footer__nav">
+          <ul>
+            <li><a href="#">Новости</a></li>
+            <li><a href="#">Отзывы</a></li>
+            <li><a href="#">Правила</a></li>
+            <li><a href="#">FAQ</a></li>
+            <li><a href="#">Администрация</a></li>
+            <li class="last"><a href="mailto:dimaezer@gmail.com">dimaezer@gmail.com</a></li>
+          </ul>
+        </div>
+        <div class="footer__right"><a class="first" href="mailto:dimaezer@gmail.com">dimaezer@gmail.com</a><span class="center">Дизайнер <span>Natalia Horobets</span></span><span class="last">&copy; Все права защищены  </span></div>
+      </div>
+    </footer>
+    <div class="modal_overlay js--modal" id="burger_modal">
+      <div class="modal_overlay__header"><a class="button_yellow_border js--auth-login-active" href="#"><span>Вход</span><i class="arrow"><svg width="18" height="12" viewBox="0 0 18 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M11.3265 0.364516C10.9867 0.704255 10.9928 1.2442 11.3265 1.57787L14.7178 4.96919L1.50437 4.96919C1.03116 4.96919 0.648957 5.35139 0.648957 5.8246C0.648957 6.29781 1.03116 6.68001 1.50437 6.68001L14.7178 6.68001L11.3265 10.0713C10.9928 10.405 10.9928 10.951 11.3265 11.2847C11.6601 11.6184 12.2061 11.6184 12.5398 11.2847L17.3932 6.43128C17.7269 6.09761 17.7269 5.5516 17.3932 5.21792L12.5398 0.364516C12.2061 0.0308439 11.6601 0.0308441 11.3265 0.364516Z"/>
+</svg></i></a>
+        <button class="modal_overlay__close js--modal-close" type="button"><svg width="42" height="42" viewBox="0 0 42 42" fill="none" xmlns="http://www.w3.org/2000/svg">
+<line x1="2.06066" y1="1.5957" x2="40.9999" y2="40.535" stroke="#E0DEF4" stroke-width="1.5" stroke-linecap="round"/>
+<line x1="1" y1="40.535" x2="39.9393" y2="1.59578" stroke="#E0DEF4" stroke-width="1.5" stroke-linecap="round"/>
+</svg>
+        </button>
+      </div>
+      <div class="modal_overlay__nav">
+        <ul>
+          <li><a href="#">Новости</a></li>
+          <li><a href="#">Отзывы</a></li>
+          <li><a href="#">FAQ</a></li>
+          <li><a href="#">Правила</a></li>
+          <li><a href="#">Администрация</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="modal_order w-500 js--modal" id="modal_edit_avatar">
+      <button class="modal_order__close_smart js--modal-close" type="button"><svg width="100%" height="100%" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+<line x1="17.4574" y1="0.93498" x2="1.49944" y2="16.893" stroke-width="1.1723"/>
+<line x1="16.6285" y1="16.893" x2="0.670491" y2="0.934983" stroke-width="1.1723"/>
+</svg>
+      </button>
+      <div class="modal_order__wrap">
+        <button class="modal_order__close js--modal-close" type="button"><svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+<line x1="17.4574" y1="0.93498" x2="1.49944" y2="16.893" stroke-width="1.1723"/>
+<line x1="16.6285" y1="16.893" x2="0.670491" y2="0.934983" stroke-width="1.1723"/>
+</svg>
+        </button>
+        <div class="title_border">Изменить аватар</div>
+        <label class="modal_order__avatar" id="drop-area">
+          <input type="file" onchange="handleFiles(this.files)" id="fileElem"><i class="icon"><svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M31.8457 28.0358V3.56771C31.8457 1.64521 30.2728 0.0722656 28.3503 0.0722656H3.88216C1.95967 0.0722656 0.386719 1.64521 0.386719 3.56771V28.0358C0.386719 29.9583 1.95967 31.5312 3.88216 31.5312H28.3503C30.2728 31.5312 31.8457 29.9583 31.8457 28.0358ZM10.6983 19.2622L14.3685 23.684L19.7864 16.7106C20.136 16.2562 20.8351 16.2562 21.1846 16.7281L27.3191 24.9074C27.756 25.4841 27.3366 26.3056 26.62 26.3056H5.66484C4.93079 26.3056 4.52882 25.4667 4.98323 24.8899L9.33505 19.2972C9.66712 18.8428 10.3313 18.8253 10.6983 19.2622Z" fill="#E0DEF4"/>
+</svg></i><b class="text">Перетащите картинку сюда</b><span class="text-mobile">Загрузить фото</span>
+        </label>
+        <div class="flex flex-between">
+          <button class="button_red" type="button"><span>Очистить</span></button>
+          <button class="button_green" type="button"><span>Сохранить</span></button>
+        </div>
+      </div>
+    </div>
+    <div class="modal_order w-500 js--modal" id="modal_edit_password">
+      <button class="modal_order__close_smart js--modal-close" type="button"><svg width="100%" height="100%" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+<line x1="17.4574" y1="0.93498" x2="1.49944" y2="16.893" stroke-width="1.1723"/>
+<line x1="16.6285" y1="16.893" x2="0.670491" y2="0.934983" stroke-width="1.1723"/>
+</svg>
+      </button>
+      <div class="modal_order__wrap">
+        <button class="modal_order__close js--modal-close" type="button"><svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+<line x1="17.4574" y1="0.93498" x2="1.49944" y2="16.893" stroke-width="1.1723"/>
+<line x1="16.6285" y1="16.893" x2="0.670491" y2="0.934983" stroke-width="1.1723"/>
+</svg>
+        </button>
+        <div class="title_border">Изменить пароль</div>
+        <div class="modal_order__setting_form">
+          <input class="field" type="password" placeholder="Текущий пароль">
+          <input class="field" type="password" placeholder="Новый пароль">
+          <div class="form_bottom">
+            <button class="button_yellow" type="submit"><span>Сохранить</span></button><a class="link" href="#">Я забыл пароль </a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="modal_order w-500 js--modal" id="modal_edit_email">
+      <button class="modal_order__close_smart js--modal-close" type="button"><svg width="100%" height="100%" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+<line x1="17.4574" y1="0.93498" x2="1.49944" y2="16.893" stroke-width="1.1723"/>
+<line x1="16.6285" y1="16.893" x2="0.670491" y2="0.934983" stroke-width="1.1723"/>
+</svg>
+      </button>
+      <div class="modal_order__wrap">
+        <button class="modal_order__close js--modal-close" type="button"><svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+<line x1="17.4574" y1="0.93498" x2="1.49944" y2="16.893" stroke-width="1.1723"/>
+<line x1="16.6285" y1="16.893" x2="0.670491" y2="0.934983" stroke-width="1.1723"/>
+</svg>
+        </button>
+        <div class="title_border">Привязать почту</div>
+        <div class="modal_order__setting_form">
+          <input class="field" type="email" placeholder="Электронная почта">
+          <div class="form_bottom one">
+            <button class="button_yellow w-full" type="submit"><span>Отправить письмо</span></button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="./libs/lazysizes/lazysizes.min.js" defer></script>
+    <script src="./libs/custom-select/custom-select.js" defer></script>
+    <script src="./libs/swiper/swiper-bundle.min.js" defer></script>
+    <script src="./libs/simplebar/simplebar.min.js" defer></script>
+    <script src="./libs/imask/imask.js" defer></script>
+    <script src="./js/common.js" defer></script>
+  </body>
+</html>

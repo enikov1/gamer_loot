@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
+    <title>Всплывающее уведомление</title>
+    <link rel="stylesheet" href="css/main.min.css">
+    <link rel="stylesheet" href="css/libs.min.css">
+  </head>
+  <body>
+    <header class="header header_small">
+      <div class="container">
+        <div class="header__top"><a class="logo" href="#"><img src="img/logo.svg" alt="logo"></a>
+          <nav class="header__top_nav">
+            <ul>
+              <li><a href="#">Новости</a></li>
+              <li><a href="#">Отзывы</a></li>
+              <li><a href="#">FAQ</a></li>
+              <li><a href="#">Правила</a></li>
+              <li><a href="#">Администрация</a></li>
+            </ul>
+          </nav>
+          <div class="header__top__right"><a class="profile_link" href="#"><img src="img/avatar.png" alt="image"></a>
+            <button class="burger" type="button"><span class="line"></span><span class="line"></span><span class="line"></span></button>
+          </div>
+        </div>
+      </div>
+    </header>
+    <div class="container">
+      <div class="breadcrumbs"><a href="lk1.html">Личный кабинет</a><a href="#">Мои объявления </a><span>🔥🔥🔥 Among US..</span></div>
+      <div class="sect_lk_header">
+        <div class="flex flex-between items-center">
+          <h1 class="title">Among US + NBA 2K21</h1>
+          <button class="button_black" type="button"><span>Заморозить</span></button>
+        </div>
+      </div>
+      <form class="sect_lk_form" action="/">
+        <div class="form_wrap">
+          <div class="form_wrap__sect">
+            <select class="custom_select" name="item">
+              <option value="1">Предмет</option>
+              <option value="2">Предмет 2</option>
+              <option value="3">Предмет 3</option>
+              <option value="4">Предмет 4</option>
+              <option value="5">Предмет 5</option>
+            </select>
+            <select class="custom_select_search" name="game" data-search="Поиск по играм">
+              <option value="1">Игра</option>
+              <option value="2">Игра 2</option>
+              <option value="3">Игра 3</option>
+              <option value="4">Игра 4</option>
+              <option value="5">Игра 5</option>
+              <option value="6">Игра</option>
+              <option value="7" selected>Among Us</option>
+              <option value="8">Игра 3</option>
+              <option value="9">Игра 4</option>
+              <option value="10">Игра 5</option>
+              <option value="11">Игра</option>
+              <option value="12">Игра 2</option>
+              <option value="13">Игра 3</option>
+              <option value="14">Игра 4</option>
+              <option value="15">Игра 5</option>
+              <option value="16">Игра</option>
+              <option value="17">Игра 2</option>
+              <option value="18">Игра 3</option>
+              <option value="19">Игра 4</option>
+              <option value="20">Игра 5</option>
+            </select>
+          </div>
+          <div class="form_wrap__sect">
+            <select class="custom_select" name="category">
+              <option value="1">Оружие</option>
+              <option value="2">Оружие 2</option>
+              <option value="3">Оружие 3</option>
+              <option value="4">Оружие 4</option>
+              <option value="5">Оружие 5</option>
+            </select>
+            <select class="custom_select" name="subcategory">
+              <option value="1">Меч</option>
+              <option value="2">Меч 2</option>
+              <option value="3">Меч 3</option>
+              <option value="4">Меч 4</option>
+              <option value="5">Меч 5</option>
+            </select>
+          </div>
+          <div class="form_wrap__sect">
+            <select class="custom_select" name="server">
+              <option value="1">PС</option>
+              <option value="2">PС 2</option>
+              <option value="3">PС 3</option>
+              <option value="4">PС 4</option>
+              <option value="5">PС 5</option>
+            </select>
+            <select class="custom_select" name="storona">
+              <option value="1">Светлая</option>
+              <option value="2">Светлая 2</option>
+              <option value="3">Светлая 3</option>
+              <option value="4">Светлая 4</option>
+              <option value="5">Светлая 5</option>
+            </select>
+          </div>
+          <div class="form_wrap__field_group">
+            <div class="field-set field-set-icon">
+              <input class="field js--mask--price" type="text" placeholder="Цена за шт." value="13 000"><span>Цена</span><svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M10.2503 0.396034C4.95433 0.396034 0.660439 4.77361 0.660439 10.1744C0.660439 15.5753 4.95433 19.9528 10.2503 19.9528C15.5463 19.9528 19.8402 15.5753 19.8402 10.1744C19.8402 4.77361 15.5463 0.396034 10.2503 0.396034ZM10.2503 1.28572C11.4277 1.28572 12.5694 1.52062 13.6437 1.98392C14.6817 2.43159 15.6141 3.07268 16.415 3.8893C17.216 4.70592 17.8447 5.65664 18.2837 6.71496C18.738 7.8102 18.9684 8.97414 18.9684 10.1744C18.9684 11.3747 18.738 12.5387 18.2837 13.634C17.8447 14.6922 17.216 15.643 16.415 16.4596C15.6141 17.2762 14.6817 17.9173 13.6437 18.365C12.5694 18.8282 11.4277 19.0632 10.2503 19.0632C9.07295 19.0632 7.93126 18.8282 6.857 18.365C5.81894 17.9173 4.88647 17.2762 4.08557 16.4596C3.28466 15.643 2.65595 14.6922 2.21694 13.634C1.76259 12.5387 1.53224 11.3747 1.53224 10.1744C1.53224 8.97414 1.76259 7.8102 2.21694 6.71496C2.65595 5.65664 3.28466 4.70592 4.08557 3.8893C4.88647 3.07268 5.81894 2.43159 6.857 1.98392C7.93126 1.52062 9.07295 1.28572 10.2503 1.28572Z" fill="#B2B1BE" stroke="#E0DEF4" stroke-width="0.0396276"/>
+<path d="M12.4105 9.19137L12.3946 9.19716L12.3864 9.18239L10.441 5.68738C10.338 5.50239 10.0776 5.50045 9.97199 5.68384L8.10589 8.92405C8.03044 9.05503 7.87411 9.11307 7.73341 9.06179L7.7402 9.04317L7.73341 9.06179L4.62815 7.92988C4.42655 7.8564 4.22372 8.03996 4.27353 8.25422L5.74633 14.5878L5.72703 14.5923L5.74633 14.5878C5.77537 14.7127 5.88462 14.8005 6.00989 14.8005H14.4895C14.6148 14.8005 14.724 14.7127 14.7531 14.5878L16.2259 8.25422C16.2757 8.03996 16.0728 7.85639 15.8712 7.92988L12.4105 9.19137ZM8.42844 9.90673L8.44561 9.91661L8.42844 9.90672L9.92577 7.30685C10.0468 7.09677 10.3458 7.09902 10.4637 7.3109L11.9341 9.95235C11.9992 10.0693 12.1369 10.1213 12.2606 10.0762L14.8054 9.14856C15.0402 9.063 15.2719 9.27941 15.211 9.52393L14.1659 13.7254C14.1311 13.8655 14.0073 13.964 13.8649 13.964H6.6882C6.5471 13.964 6.42408 13.8671 6.38807 13.7287L5.29597 9.52967C5.23217 9.28438 5.46451 9.06489 5.70073 9.15103L8.10391 10.027C8.22614 10.0716 8.36246 10.0213 8.42844 9.90673Z" fill="#B2B1BE" stroke="#E0DEF4" stroke-width="0.0396276"/>
+</svg>
+            </div>
+            <div class="field-set">
+              <input class="field js--mask--price" type="text" placeholder="Количество" value="13 000"><span>Наличие</span>
+            </div>
+          </div>
+          <div class="form_wrap__field">
+            <input class="field js--mask--title" type="text" placeholder="Название товара (до 60 символов)" maxlength="60" value="Among US + NBA 2K21 "><span>Название (до 60 символов)</span>
+          </div>
+          <div class="form_wrap__field">
+            <textarea class="field js--mask--desc" name="desc" placeholder="Описание товара (до 1000 символов)" maxlength="1000">⭐После покупки аккаунта Вы получаете:
+☀️Логин и пароль от аккаунта Epic Games.
+☀️Логин и пароль от родной почты.
+☀️Вы сможете сменить любые данные на свои.
+📌 Дополнительная информация:</textarea><span>Название (до 1000 символов)</span>
+          </div>
+          <div class="form_wrap__button">
+            <div class="flex">
+              <button class="button_yellow" type="submit"><span>Сохранить изменения</span></button><a class="link" href="#">Отменить </a>
+            </div>
+          </div>
+        </div>
+      </form>
+    </div>
+    <footer class="footer">
+      <div class="container"><a class="logo" href="/"><img src="img/logo_text.svg" alt="image"></a>
+        <div class="footer__nav">
+          <ul>
+            <li><a href="#">Новости</a></li>
+            <li><a href="#">Отзывы</a></li>
+            <li><a href="#">Правила</a></li>
+            <li><a href="#">FAQ</a></li>
+            <li><a href="#">Администрация</a></li>
+            <li class="last"><a href="mailto:dimaezer@gmail.com">dimaezer@gmail.com</a></li>
+          </ul>
+        </div>
+        <div class="footer__right"><a class="first" href="mailto:dimaezer@gmail.com">dimaezer@gmail.com</a><span class="center">Дизайнер <span>Natalia Horobets</span></span><span class="last">&copy; Все права защищены  </span></div>
+      </div>
+    </footer>
+    <div class="modal_overlay js--modal" id="burger_modal">
+      <div class="modal_overlay__header"><a class="button_yellow_border js--auth-login-active" href="#"><span>Вход</span><i class="arrow"><svg width="18" height="12" viewBox="0 0 18 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M11.3265 0.364516C10.9867 0.704255 10.9928 1.2442 11.3265 1.57787L14.7178 4.96919L1.50437 4.96919C1.03116 4.96919 0.648957 5.35139 0.648957 5.8246C0.648957 6.29781 1.03116 6.68001 1.50437 6.68001L14.7178 6.68001L11.3265 10.0713C10.9928 10.405 10.9928 10.951 11.3265 11.2847C11.6601 11.6184 12.2061 11.6184 12.5398 11.2847L17.3932 6.43128C17.7269 6.09761 17.7269 5.5516 17.3932 5.21792L12.5398 0.364516C12.2061 0.0308439 11.6601 0.0308441 11.3265 0.364516Z"/>
+</svg></i></a>
+        <button class="modal_overlay__close js--modal-close" type="button"><svg width="42" height="42" viewBox="0 0 42 42" fill="none" xmlns="http://www.w3.org/2000/svg">
+<line x1="2.06066" y1="1.5957" x2="40.9999" y2="40.535" stroke="#E0DEF4" stroke-width="1.5" stroke-linecap="round"/>
+<line x1="1" y1="40.535" x2="39.9393" y2="1.59578" stroke="#E0DEF4" stroke-width="1.5" stroke-linecap="round"/>
+</svg>
+        </button>
+      </div>
+      <div class="modal_overlay__nav">
+        <ul>
+          <li><a href="#">Новости</a></li>
+          <li><a href="#">Отзывы</a></li>
+          <li><a href="#">FAQ</a></li>
+          <li><a href="#">Правила</a></li>
+          <li><a href="#">Администрация</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="abs_message_top green">
+      <p class="text">Объявление успешно отредактировано</p>
+      <button class="close" type="button"><svg width="16" height="15" viewBox="0 0 16 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+<line x1="1.53034" y1="0.433594" x2="15.1424" y2="14.0457" stroke="#E0DEF4" stroke-width="0.750016" stroke-linecap="round"/>
+<line x1="1" y1="14.0458" x2="14.6121" y2="0.433738" stroke="#E0DEF4" stroke-width="0.750016" stroke-linecap="round"/>
+</svg>
+      </button>
+    </div>
+    <script src="./libs/lazysizes/lazysizes.min.js" defer></script>
+    <script src="./libs/custom-select/custom-select.js" defer></script>
+    <script src="./libs/swiper/swiper-bundle.min.js" defer></script>
+    <script src="./libs/simplebar/simplebar.min.js" defer></script>
+    <script src="./libs/imask/imask.js" defer></script>
+    <script src="./js/common.js" defer></script>
+  </body>
+</html>

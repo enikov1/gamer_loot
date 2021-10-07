@@ -90,9 +90,9 @@
 </svg>
                 </div>
               </div>
-              <div class="balans_control__bottom"><a class="button" href="#"><svg width="15" height="15" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <div class="balans_control__bottom"><a class="button js--modal-order" href="#" data-modal="modal_add_money"><svg width="15" height="15" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
 <path d="M13.457 8.90723H8.45703V13.9072C8.45703 14.4572 8.00703 14.9072 7.45703 14.9072C6.90703 14.9072 6.45703 14.4572 6.45703 13.9072V8.90723H1.45703C0.907031 8.90723 0.457031 8.45723 0.457031 7.90723C0.457031 7.35723 0.907031 6.90723 1.45703 6.90723H6.45703V1.90723C6.45703 1.35723 6.90703 0.907227 7.45703 0.907227C8.00703 0.907227 8.45703 1.35723 8.45703 1.90723V6.90723H13.457C14.007 6.90723 14.457 7.35723 14.457 7.90723C14.457 8.45723 14.007 8.90723 13.457 8.90723Z"/>
-</svg><span>Пополнить</span></a><a class="button" href="#"><svg width="15" height="15" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+</svg><span>Пополнить</span></a><a class="button js--modal-order" href="#" data-modal="modal_remove_money"><svg width="15" height="15" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
 <path d="M10.3588 1.87953L10.3588 1.87953L10.3597 1.8808L14.3996 7.53066C14.5624 7.75854 14.5637 8.05677 14.4075 8.28673L10.3697 13.9336L10.3688 13.9349C10.0944 14.3223 9.64091 14.5572 9.16441 14.5572C7.95654 14.5572 7.25684 13.1975 7.95858 12.2215L7.9594 12.2204L10.8894 8.1104L11.0342 7.90723L10.8894 7.70406L7.95969 3.59446C7.95964 3.5944 7.9596 3.59433 7.95955 3.59427C7.26361 2.61478 7.96031 1.25723 9.16441 1.25723C9.63881 1.25723 10.0832 1.49046 10.3588 1.87953Z" stroke="#18172A" stroke-width="0.7"/>
 <path d="M7.39946 7.53047L7.3996 7.53066C7.56238 7.75854 7.56367 8.05677 7.4075 8.28673L3.3697 13.9336L3.3688 13.9349C3.09443 14.3223 2.64091 14.5572 2.16441 14.5572C0.95654 14.5572 0.256836 13.1975 0.958581 12.2215L0.959402 12.2204L3.8894 8.1104L4.03424 7.90723L3.8894 7.70406L0.959402 3.59406L0.959404 3.59405L0.958578 3.59291C0.256836 2.61692 0.95654 1.25723 2.16441 1.25723C2.63744 1.25723 3.08368 1.48947 3.37058 1.88203L7.39946 7.53047Z" stroke="#18172A" stroke-width="0.7"/>
 </svg><span>Вывести </span></a></div>
@@ -249,10 +249,98 @@
         </ul>
       </div>
     </div>
+    <div class="modal_order w-600 js--modal" id="modal_add_money">
+      <button class="modal_order__close_smart js--modal-close" type="button"><svg width="100%" height="100%" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+<line x1="17.4574" y1="0.93498" x2="1.49944" y2="16.893" stroke-width="1.1723"/>
+<line x1="16.6285" y1="16.893" x2="0.670491" y2="0.934983" stroke-width="1.1723"/>
+</svg>
+      </button>
+      <div class="modal_order__wrap">
+        <button class="modal_order__close js--modal-close" type="button"><svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+<line x1="17.4574" y1="0.93498" x2="1.49944" y2="16.893" stroke-width="1.1723"/>
+<line x1="16.6285" y1="16.893" x2="0.670491" y2="0.934983" stroke-width="1.1723"/>
+</svg>
+        </button>
+        <div class="modal_order__header">
+          <div class="title">Пополнение баланса</div>
+        </div>
+        <form action="/"> 
+          <div class="field_set_radio"><span class="text">Способ оплаты</span>
+            <label class="field_radio">
+              <input type="radio" name="pay_method1" checked><span class="check"></span><span class="text">Карта</span>
+            </label>
+            <label class="field_radio">
+              <input type="radio" name="pay_method1"><span class="check"></span><span class="text">Другой способ</span>
+            </label>
+          </div>
+          <div class="field_set mb-30">
+            <input class="field js--mask-number" type="text" placeholder="Сумма пополнения в рублях" required>
+          </div>
+          <div class="field_set_card mb-30">
+            <input class="field js--mask-card" type="text" placeholder="Номер карты" required>
+            <div class="field_cvv">
+              <input class="field js--mask-cvv" type="number" placeholder="CVV" required><span class="required">i</span>
+            </div>
+            <div class="field_data">
+              <input class="field js--mask-data" type="text" placeholder="Срок действия" required>
+            </div>
+          </div>
+          <div class="field_set_code">
+            <input class="field js--mask-code-ref" type="text" placeholder="Код подтверждения">
+            <button class="button_yellow_border" type="button"><span>Получить код</span></button>
+          </div>
+          <div class="text_result">
+            <p class="top"><span class="desktop">Вы получите: </span><span class="mobile">На счет будет зачислено: </span> <span class="count">1500 руб</span></p>
+            <p class="bottom">Учтена комиссия процессинга на перевод</p>
+          </div>
+          <button class="button_yellow" type="submit"><span>Вывести средства</span></button>
+        </form>
+      </div>
+    </div>
+    <div class="modal_order w-600 js--modal" id="modal_remove_money">
+      <button class="modal_order__close_smart js--modal-close" type="button"><svg width="100%" height="100%" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+<line x1="17.4574" y1="0.93498" x2="1.49944" y2="16.893" stroke-width="1.1723"/>
+<line x1="16.6285" y1="16.893" x2="0.670491" y2="0.934983" stroke-width="1.1723"/>
+</svg>
+      </button>
+      <div class="modal_order__wrap">
+        <button class="modal_order__close js--modal-close" type="button"><svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+<line x1="17.4574" y1="0.93498" x2="1.49944" y2="16.893" stroke-width="1.1723"/>
+<line x1="16.6285" y1="16.893" x2="0.670491" y2="0.934983" stroke-width="1.1723"/>
+</svg>
+        </button>
+        <div class="modal_order__header">
+          <div class="title">Вывод средств</div>
+        </div>
+        <form action="/"> 
+          <div class="field_set_radio"><span class="text">Куда вывести деньги?</span>
+            <label class="field_radio">
+              <input type="radio" name="pay_method2" checked><span class="check"></span><span class="text">Карта</span>
+            </label>
+            <label class="field_radio">
+              <input type="radio" name="pay_method2"><span class="check"></span><span class="text">Другой способ</span>
+            </label>
+          </div>
+          <div class="field_set_card mb-30">
+            <input class="field js--mask-card" type="text" placeholder="Номер карты" required>
+          </div>
+          <div class="field_set_code">
+            <input class="field js--mask-code-ref" type="text" placeholder="Код подтверждения">
+            <button class="button_yellow_border" type="button"><span>Получить код</span></button>
+          </div>
+          <div class="text_result">
+            <p class="top"><span class="desktop">Вы получите: </span><span class="mobile">На счет будет зачислено: </span> <span class="count">1500 руб</span></p>
+            <p class="bottom">Учтена комиссия процессинга на перевод</p>
+          </div>
+          <button class="button_yellow" type="submit"><span>Вывести средства</span></button>
+        </form>
+      </div>
+    </div>
     <script src="./libs/lazysizes/lazysizes.min.js" defer></script>
     <script src="./libs/custom-select/custom-select.js" defer></script>
     <script src="./libs/swiper/swiper-bundle.min.js" defer></script>
     <script src="./libs/simplebar/simplebar.min.js" defer></script>
+    <script src="./libs/imask/imask.js" defer></script>
     <script src="./js/common.js" defer></script>
   </body>
 </html>

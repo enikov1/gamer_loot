@@ -447,6 +447,19 @@ const selected = () => {
 			})
 		})
 	}
+
+	const select_custom_search = document.querySelectorAll('.custom_select_search')
+
+	if (select_custom_search) {
+		select_custom_search.forEach(e => {
+			new SlimSelect({
+				select: e,
+				searchText: 'Результата не найдено',
+				searchPlaceholder: e.getAttribute('data-search'),
+				showSearch: true,
+			})
+		})
+	}
 }
 
 const calc_control = () => {
@@ -654,6 +667,284 @@ const lk_page = () => {
 	})
 }
 
+
+const inputMask = () => {
+
+	const fieldData = document.querySelectorAll('.js--mask-data')
+
+	if (fieldData) {
+		fieldData.forEach(e => {
+			var dateMask = IMask(
+				e, {
+					mask: Date,
+					min: new Date(1990, 0, 1),
+					max: new Date(2030, 0, 1),
+					lazy: true
+				})
+		})
+	}
+
+	const fieldCVV = document.querySelectorAll('.js--mask-cvv')
+
+	if (fieldCVV) {
+		fieldCVV.forEach(e => {
+			var cvvMask = IMask(
+				e, {
+					mask: /^[1-9]\d{0,2}$/,
+					lazy: true
+				})
+		})
+	}
+	
+	const fieldCard = document.querySelectorAll('.js--mask-card')
+
+	if (fieldCard) {
+		fieldCard.forEach(e => {
+			var cardMask = IMask(
+				e, {
+					mask: '0000 0000 0000 0000',
+					lazy: true
+				})
+		})
+	}
+
+	const fieldNumber = document.querySelectorAll('.js--mask-number')
+
+	if (fieldNumber) {
+		fieldNumber.forEach(e => {
+			var numberMask = IMask(
+				e, {
+					mask: Number,
+					min: 0,
+					max: 100000000,
+					thousandsSeparator: ' '
+				})
+		})
+	}
+
+	const fieldCodeRef = document.querySelectorAll('.js--mask-code-ref')
+
+	if (fieldCodeRef) {
+		fieldCodeRef.forEach(e => {
+			var codeRefMask = IMask(
+				e, {
+					mask: /^[0-9]\d{0,4}$/,
+					lazy: true
+				})
+		})
+	}
+
+	const fieldPrice = document.querySelectorAll('.js--mask--price')
+
+	if (fieldPrice) {
+		fieldPrice.forEach(e => {
+			var prceMask = IMask(
+				e, {
+					mask: Number,
+					min: 0,
+					max: 100000000,
+					thousandsSeparator: ' '
+				})
+		})
+	}
+}
+
+
+const filter_lk = () => {
+	const filter_active = document.querySelector('.js--filter-active')
+	const lk_filter_wrap = document.querySelector('.lk_sect_filter__buttons')
+
+	if(filter_active) {
+		filter_active.addEventListener('click', function(event) {
+			lk_filter_wrap.classList.toggle('active')
+		})
+	}
+}
+
+const table_order_row = () => {
+	const items = document.querySelectorAll('.table_order__rows')
+
+	if(items) {
+
+		items.forEach(e => {
+			let button_toggle = e.querySelector('.button_toggle')
+			// const toggle_wrap = e.querySelector('.toggle_wrap')
+			
+			if (button_toggle) {
+				button_toggle.addEventListener('click', function (event) {
+					event.preventDefault()
+
+					for (let item of e.parentNode.children) {
+						item.classList.remove('active')
+					}
+
+					e.classList.add('active')
+				})
+			}
+
+			
+		})
+		
+	}
+}
+
+let dropArea = document.getElementById('drop-area')
+
+if (dropArea) {
+	;
+	['dragenter', 'dragover', 'dragleave', 'drop'].forEach(eventName => {
+		dropArea.addEventListener(eventName, preventDefaults, false)
+	})
+
+	function preventDefaults(e) {
+		e.preventDefault()
+		e.stopPropagation()
+	}
+
+
+	;
+	['dragenter', 'dragover'].forEach(eventName => {
+		dropArea.addEventListener(eventName, highlight, false)
+	})
+
+
+	;
+	['dragleave', 'drop'].forEach(eventName => {
+		dropArea.addEventListener(eventName, unhighlight, false)
+	})
+
+	function highlight(e) {
+		dropArea.classList.add('highlight')
+	}
+
+	function unhighlight(e) {
+		dropArea.classList.remove('highlight')
+	}
+
+	dropArea.addEventListener('drop', handleDrop, false)
+
+	function handleDrop(e) {
+		let dt = e.dataTransfer
+		let files = dt.files
+
+		handleFiles(files)
+	}
+
+	function handleFiles(files) {
+		([...files]).forEach(uploadFile)
+	}
+
+	function uploadFile(file) {
+		var url = '/'
+		var xhr = new XMLHttpRequest()
+		var formData = new FormData()
+		xhr.open('POST', url, true)
+
+		xhr.addEventListener('readystatechange', function (e) {
+			if (xhr.readyState == 4 && xhr.status == 200) {
+				// Готово. Информируем пользователя
+			} else if (xhr.readyState == 4 && xhr.status != 200) {
+				// Ошибка. Информируем пользователя
+			}
+		})
+
+		formData.append('file', file)
+		xhr.send(formData)
+	}
+}
+
+const lk_message_fixed_top = () => {
+	const item = document.querySelectorAll('.abs_message_top')
+
+	if(item) {
+		item.forEach(e => {
+			const close = e.querySelector('.close')
+
+			close.addEventListener('click', function(event) {
+				event.preventDefault()
+
+				e.remove()
+			})
+		})
+	}
+}
+
+const puzzle_slider = () => {
+	const elem = document.querySelector('.page_puzzle')
+
+	if(elem) {
+
+		var swiper = new Swiper(elem.querySelector('.puzzle__slider_thumbs'), {
+			slidesPerView: 1,
+			spaceBetween: 20,
+
+			onlyExternal: true,
+			noSwiping: true,
+			allowTouchMove: false,
+
+			// pagination: {
+			// 	el: elem.querySelector('.swiper_control__bullet'),
+			// 	clickable: true,
+			// 	dynamicBullets: true,
+			// },
+
+			navigation: {
+				nextEl: elem.querySelector('.swiper_control__right'),
+				prevEl: elem.querySelector('.swiper_control__left')
+			},
+		})
+
+		var swiper2 = new Swiper(elem.querySelector('.puzzle__slider_main'), {
+			slidesPerView: 1,
+			spaceBetween: 20,
+			onlyExternal: true,
+			noSwiping: true,
+			allowTouchMove: false,
+
+			pagination: {
+				el: elem.querySelector('.swiper_control__bullet'),
+				clickable: true,
+				dynamicBullets: true,
+			},
+
+			navigation: {
+				nextEl: elem.querySelector('.swiper_control__right'),
+				prevEl: elem.querySelector('.swiper_control__left')
+			},
+
+			thumbs: {
+				swiper: swiper,
+			},
+
+			// breakpoints: {
+			// 	'0': {
+			// 		loop: false,
+			// 		slidesPerView: 'auto',
+
+			// 		grid: {
+			// 			rows: 3
+			// 		},
+			// 		spaceBetween: 40,
+
+			// 	},
+			// 	'1200': {
+			// 		loop: true,
+			// 		slidesPerView: 3,
+			// 		spaceBetween: 40,
+
+			// 		grid: {
+			// 			rows: 1,
+			// 		}
+			// 	}
+			// }
+		})
+
+		
+	}
+}
+
+
+
 header()
 section_search_game()
 section_news()
@@ -672,5 +963,13 @@ inline_user_info()
 accordion()
 chat()
 lk_page()
+filter_lk()
 
 order_modal()
+
+table_order_row()
+lk_message_fixed_top()
+
+puzzle_slider()
+
+inputMask()
