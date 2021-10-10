@@ -863,7 +863,10 @@ const lk_message_fixed_top = () => {
 			close.addEventListener('click', function(event) {
 				event.preventDefault()
 
-				e.remove()
+				e.classList.add('messageRemove')
+				setTimeout(() => {
+					e.remove()
+				}, 600);
 			})
 		})
 	}
