@@ -6546,6 +6546,14 @@ body {
   }
 }
 
+.main_chat__messages .wrap_scroll {
+  height: calc(100vh - 200px);
+}
+
+.main_chat__messages .wrap_scroll .simplebar-content {
+  height: 100vh;
+}
+
 .main_chat__messages_wrap {
   background-color: #18172A;
   padding: 3.75rem 2.125rem 1.875rem 5rem;
@@ -6562,6 +6570,7 @@ body {
   -webkit-justify-content: flex-end;
       -ms-flex-pack: end;
           justify-content: flex-end;
+  height: 100%;
   -webkit-box-flex: 1;
   -webkit-flex: 1;
       -ms-flex: 1;
