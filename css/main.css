@@ -9410,10 +9410,16 @@ body {
 }
 
 .puzzle__slider {
-  max-width: 55.625rem;
+  max-width: 55.76188rem;
   margin-bottom: 3.125rem;
   margin-left: auto;
   margin-right: auto;
+}
+
+@media (max-width: 991px) {
+  .puzzle__slider {
+    max-width: 48rem;
+  }
 }
 
 @media (max-width: 540px) {
@@ -9424,37 +9430,149 @@ body {
 
 .puzzle__slider .swiper {
   margin-bottom: 3.75rem;
-  height: 42.3125rem;
 }
 
 @media (max-width: 767px) {
   .puzzle__slider .swiper {
-    width: 18.125rem;
-    height: 13.625rem;
     margin-bottom: 1.875rem;
-  }
-}
-
-.puzzle__slider .swiper .swiper-slide {
-  height: 42.3125rem;
-}
-
-@media (max-width: 767px) {
-  .puzzle__slider .swiper .swiper-slide {
-    height: 13.625rem;
   }
 }
 
 .puzzle__slider .puzzle_item {
   height: 100%;
+  position: relative;
 }
 
 .puzzle__slider .puzzle_item img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
   width: 100%;
   height: 100%;
   -o-object-fit: cover;
      object-fit: cover;
   vertical-align: middle;
+}
+
+.puzzle__slider .puzzle_item__svg {
+  width: 100%;
+}
+
+.puzzle__slider .puzzle_item__svg img {
+  width: auto;
+  height: 100%;
+}
+
+.puzzle__slider .puzzle_item__svg svg path.active {
+  fill: transparent !important;
+}
+
+.puzzle__slider .puzzle_item__svg div.active svg {
+  fill: transparent;
+}
+
+.puzzle__slider .puzzle_item__svg div svg {
+  fill: #18172A;
+}
+
+.puzzle__slider .puzzle_item__svg .svg1 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 25.22%;
+  height: 43.04%;
+}
+
+.puzzle__slider .puzzle_item__svg .svg2 {
+  width: 40.41%;
+  height: 33.38%;
+  position: absolute;
+  top: 0;
+  left: 17.04%;
+}
+
+.puzzle__slider .puzzle_item__svg .svg3 {
+  position: absolute;
+  top: 0;
+  left: 27.8125rem;
+  width: 25.22%;
+  height: 42.98%;
+  left: 50%;
+  -webkit-clip-path: url(#myClip);
+          clip-path: url(#myClip);
+}
+
+.puzzle__slider .puzzle_item__svg .svg4 {
+  position: absolute;
+  top: 0;
+  width: 33.97%;
+  height: 33.53%;
+  left: 66.48%;
+}
+
+.puzzle__slider .puzzle_item__svg .svg5 {
+  position: absolute;
+  left: 0;
+  width: 32.73%;
+  height: 33.38%;
+  top: 33.38%;
+}
+
+.puzzle__slider .puzzle_item__svg .svg6 {
+  position: absolute;
+  width: 25.22%;
+  height: 52.51%;
+  top: 23.04%;
+  left: 25%;
+}
+
+.puzzle__slider .puzzle_item__svg .svg7 {
+  position: absolute;
+  width: 40.25%;
+  height: 33.38%;
+  top: 33.38%;
+  left: 41.82%;
+}
+
+.puzzle__slider .puzzle_item__svg .svg8 {
+  position: absolute;
+  width: 25.34%;
+  height: 52.58%;
+  top: 22.45%;
+  left: 75.11%;
+}
+
+.puzzle__slider .puzzle_item__svg .svg9 {
+  position: absolute;
+  left: 0;
+  width: 25.22%;
+  height: 44.69%;
+  top: 55.24%;
+}
+
+.puzzle__slider .puzzle_item__svg .svg10 {
+  position: absolute;
+  width: 40.41%;
+  height: 33.38%;
+  top: 66.62%;
+  left: 17.04%;
+}
+
+.puzzle__slider .puzzle_item__svg .svg11 {
+  position: absolute;
+  width: 25.22%;
+  height: 44.69%;
+  top: 55.24%;
+  left: 50%;
+}
+
+.puzzle__slider .puzzle_item__svg .svg12 {
+  position: absolute;
+  width: 33.71%;
+  height: 33.38%;
+  left: 66.7%;
+  top: 66.62%;
 }
 
 .puzzle__slider_nav {
